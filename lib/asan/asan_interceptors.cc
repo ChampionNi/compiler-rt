@@ -611,6 +611,7 @@ INTERCEPTOR(int, strncmp, const char *s1, const char *s2, size_t size) {
   if (asan_init_is_running) {
     return REAL(strncmp)(s1, s2, size);
   }
+  ENSURE_ASAN_INITED();
   unsigned char c1 = 0, c2 = 0;
   size_t i;
   for (i = 0; i < size; i++) {
