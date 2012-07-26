@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAH3n///iw\u003d",
+        "filename": "lib/asan/asan_interceptors.cc",
+        "patchSetId": 1
+      },
+      "lineNbr": 539,
+      "author": {
+        "id": 1003966
+      },
+      "writtenOn": "2012-07-26T19:53:44Z",
+      "side": 1,
+      "message": "FYI: It looks like this strcmp call is missing an ENSURE_ASAN_INITED() too.",
+      "revId": "22cd35c12645b3fae65dd26e29d1e9ff1ef09b5f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
