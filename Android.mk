@@ -297,8 +297,10 @@ define build-libcompiler-rt
     LOCAL_CFLAGS += -D__ARM_EABI__
   endif
 
-  # Use MC assembler to compile assembly
-  LOCAL_ASFLAGS += -integrated-as
+  # Add flags for hwdiv support on cortex-a15
+  ifeq ($(TARGET_CPU_VARIANT),$(filter $(TARGET_CPU_VARIANT),cortex-a15 krait))
+    LOCAL_ASFLAGS += -mcpu=cortex-a15 -D__ARM_ARCH_7S__=1
+  endif
 
   # Use Clang to compile libcompiler_rt
   LOCAL_CLANG := true
