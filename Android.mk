@@ -295,6 +295,10 @@ define build-libcompiler-rt
   # Add -D__ARM_EABI__ for ARM
   ifeq ($$(arch),arm)
     LOCAL_CFLAGS += -D__ARM_EABI__
+    # Add __ARM_ARCH_7S__ for cortex-a15
+    ifeq ($(TARGET_CPU_VARIANT),$(filter $(TARGET_CPU_VARIANT),cortex-a15 krait))
+      LOCAL_CFLAGS += -D__ARM_ARCH_7S__
+    endif
   endif
 
   # Use MC assembler to compile assembly
