@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e83d8c4_c8bd8354",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2013-10-11T23:29:19Z",
+      "side": 1,
+      "message": "Did you mean to say cortex-a15 and krait?",
+      "revId": "88a71f79810e333ee835dce291b376027e12b6d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
