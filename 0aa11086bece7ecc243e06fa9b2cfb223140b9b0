@@ -16,6 +16,24 @@
       "revId": "0aa11086bece7ecc243e06fa9b2cfb223140b9b0",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fe0bac5e_8a6d71c6",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2013-10-21T21:32:26Z",
+      "side": 1,
+      "message": "Unfortunately, gcc setting __ARM_ARCH_7S__ seems pretty broken to me. It is error-prone to set this when it really is only applicable to Apple\u0027s implementation. There are now patches in upstream LLVM that set __ARM_ARCH_EXT_IDIV__ for cortex-a15. I will cherry-pick/test those fixes and update AOSP when I have new prebuilts.",
+      "parentUuid": "de1988c0_098c0d32",
+      "revId": "0aa11086bece7ecc243e06fa9b2cfb223140b9b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
