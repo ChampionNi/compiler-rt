@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "de1988c0_098c0d32",
+        "filename": "Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 1002185
+      },
+      "writtenOn": "2013-10-21T11:09:54Z",
+      "side": 1,
+      "message": "As of gcc 4.8 defining -mcpu\u003dcortex-a15 should set __ARM_ARCH_7S__ as true anyway - it should be set as true for all ARMv7-A and ARMv7-R cores (a+r \u003d s)\n\nI believe you want to use __ARM_ARCH_EXT_IDIV__ (which will also be set) to test for IDIV inline.",
+      "revId": "0aa11086bece7ecc243e06fa9b2cfb223140b9b0",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
