@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a332fed0_30f71046",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2013-12-11T18:06:38Z",
+      "side": 1,
+      "message": "i don\u0027t think we can we build llvm for x86-64, can we? we should fix both at the same time in changes like this.",
+      "revId": "e3c30bfc1e34e323bf83ed3f062e4251778007b2",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
