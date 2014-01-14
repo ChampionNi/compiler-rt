@@ -1,0 +1,8 @@
+Verified+1: Deckard Autoverifier <deckard@android.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Code-Review+1: Pavel Chupin <pavel.v.chupin@intel.com>
+Submitted-by: Stephen Hines <srhines@google.com>
+Submitted-at: Tue, 14 Jan 2014 16:53:18 +0000
+Reviewed-on: https://android-review.googlesource.com/71811
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
