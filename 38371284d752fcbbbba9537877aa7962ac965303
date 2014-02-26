@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dc0199f4_448f44a8",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2014-02-26T17:14:03Z",
+      "side": 1,
+      "message": "There\u0027s no inline assembler in bionic for __mips__ .",
+      "parentUuid": "1cf89137_91ca1e36",
+      "revId": "38371284d752fcbbbba9537877aa7962ac965303",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3cfb9535_40483cec",
         "filename": "lib/clear_cache.c",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-02-26T17:07:09Z",
       "side": 1,
       "message": "ILP",
+      "revId": "38371284d752fcbbbba9537877aa7962ac965303",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c0a6d15_c1fe9819",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2014-02-26T17:14:03Z",
+      "side": 1,
+      "message": "This isn\u0027t my change. It shows up as a diff because this is a diff from the revision we have on android, not upstream ToT.",
+      "parentUuid": "3cfb9535_40483cec",
       "revId": "38371284d752fcbbbba9537877aa7962ac965303",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
