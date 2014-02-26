@@ -24,6 +24,7 @@ LOCAL_PATH := $(call my-dir)
 # Skip clear_cache.c since it redefines a system function on Android.
 # Skip gcc_personality_v0.c since it depends on libunwind.
 libcompiler_rt_common_SRC_FILES := \
+  lib/clear_cache.c \
   lib/absvdi2.c \
   lib/absvsi2.c \
   lib/absvti2.c \
