@@ -24,6 +24,7 @@ LOCAL_PATH := $(call my-dir)
 # Skip clear_cache.c since it redefines a system function on Android.
 # Skip gcc_personality_v0.c since it depends on libunwind.
 libcompiler_rt_common_SRC_FILES := \
+  lib/clear_cache.c \
   lib/absvdi2.c \
   lib/absvsi2.c \
   lib/absvti2.c \
@@ -303,6 +304,7 @@ LOCAL_MODULE := libcompiler_rt
 LOCAL_CFLAGS_arm += -D__ARM_EABI__
 LOCAL_ASFLAGS := -integrated-as
 LOCAL_CLANG := true
+LOCAL_ARM_MODE := arm
 LOCAL_SRC_FILES_arm := $(call get-libcompiler-rt-source-files,arm)
 LOCAL_SRC_FILES_mips := $(call get-libcompiler-rt-source-files,mips)
 LOCAL_SRC_FILES_x86 := $(call get-libcompiler-rt-source-files,x86)
