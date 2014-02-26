@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1cf89137_91ca1e36",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2014-02-26T17:07:09Z",
+      "side": 1,
+      "message": "you didn\u0027t want to take the inline assembler from bionic and make this work for all __mips__?",
+      "revId": "38371284d752fcbbbba9537877aa7962ac965303",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3cfb9535_40483cec",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2014-02-26T17:07:09Z",
+      "side": 1,
+      "message": "ILP",
+      "revId": "38371284d752fcbbbba9537877aa7962ac965303",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
