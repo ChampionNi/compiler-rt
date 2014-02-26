@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "5c44c956_5516dc32",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2014-02-26T17:27:51Z",
+      "side": 1,
+      "message": "oh, yeah, i switched us over to the GCC builtin.",
+      "parentUuid": "dc0199f4_448f44a8",
+      "revId": "38371284d752fcbbbba9537877aa7962ac965303",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3cfb9535_40483cec",
         "filename": "lib/clear_cache.c",
         "patchSetId": 1
