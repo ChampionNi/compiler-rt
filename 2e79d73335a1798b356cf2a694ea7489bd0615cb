@@ -16,6 +16,23 @@
       "revId": "2e79d73335a1798b356cf2a694ea7489bd0615cb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9cd00111_41def283",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1002185
+      },
+      "writtenOn": "2014-03-09T11:07:23Z",
+      "side": 1,
+      "message": "Yes it does.\n\nThumb version is limited to 8-bits of immediate, but doesn\u0027t seem to be an issue here.",
+      "revId": "2e79d73335a1798b356cf2a694ea7489bd0615cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
