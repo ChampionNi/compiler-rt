@@ -33,6 +33,24 @@
       "revId": "2e79d73335a1798b356cf2a694ea7489bd0615cb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c1ab5b4_06699acf",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2014-03-10T09:05:47Z",
+      "side": 1,
+      "message": "Hmm weird. I was led to believe that it was necessary to switch to the ARM state before making the supervisor call;\nSee : https://code.google.com/p/v8/source/browse/trunk/src/arm/cpu-arm.cc?#94\n\n(Could it be that some SVC handler was not doing the right thing if called from the thumb state ? From what I understand, it\u0027s the handler\u0027s responsibility to figure out whether it\u0027s called while in thumb state or not)",
+      "parentUuid": "9cd00111_41def283",
+      "revId": "2e79d73335a1798b356cf2a694ea7489bd0615cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
