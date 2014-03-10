@@ -305,9 +305,13 @@ LOCAL_ASFLAGS := -integrated-as
 LOCAL_CLANG := true
 LOCAL_SRC_FILES_arm := $(call get-libcompiler-rt-source-files,arm)
 LOCAL_SRC_FILES_mips := $(call get-libcompiler-rt-source-files,mips)
+
+# mips contains nothing extra
+LOCAL_SRC_FILES_arm64 := $(call get-libcompiler-rt-source-files,mips)
+
 LOCAL_SRC_FILES_x86 := $(call get-libcompiler-rt-source-files,x86)
 LOCAL_SRC_FILES_x86_64 := $(call get-libcompiler-rt-source-files,x86_64)
-LOCAL_MODULE_TARGET_ARCH := arm mips x86 x86_64
+LOCAL_MODULE_TARGET_ARCH := arm mips x86 x86_64 arm64
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 
 include $(BUILD_STATIC_LIBRARY)
@@ -321,7 +325,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libcompiler_rt
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_WHOLE_STATIC_LIBRARIES := libcompiler_rt
-LOCAL_MODULE_TARGET_ARCH := arm mips x86 x86_64
+LOCAL_MODULE_TARGET_ARCH := arm mips x86 x86_64 arm64
 
 include $(BUILD_SHARED_LIBRARY)
 
