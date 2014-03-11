@@ -51,6 +51,41 @@
       "revId": "2e79d73335a1798b356cf2a694ea7489bd0615cb",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dce519f4_5bb0a307",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1002185
+      },
+      "writtenOn": "2014-03-11T11:08:16Z",
+      "side": 1,
+      "message": "It\u0027s possible that some ancient version of the Linux kernel had an issue that this worked around, but I\u0027ve assured it shouldn\u0027t matter now.\n\nI\u0027m going to ask the ARM Javascript team to see if this needs some attention in V8.",
+      "parentUuid": "3c1ab5b4_06699acf",
+      "revId": "2e79d73335a1798b356cf2a694ea7489bd0615cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c25a9ed_2a861fbd",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1002185
+      },
+      "writtenOn": "2014-03-11T11:08:16Z",
+      "side": 1,
+      "message": "r7 is callee saved and used by GCC as a frame pointer in Thumb, but putting it in the clobber list should be sufficient. Switching to ARM isn\u0027t necessary.",
+      "revId": "2e79d73335a1798b356cf2a694ea7489bd0615cb",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
