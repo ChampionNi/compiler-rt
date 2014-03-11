@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c1ab5b4_09e6cd97",
+        "filename": "lib/clear_cache.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1014443
+      },
+      "writtenOn": "2014-03-11T11:39:38Z",
+      "side": 1,
+      "message": "Generated code in thumb \u0026 arm modes:\n\n00000000 \u003c__clear_cache\u003e:\n   0:\tb580      \tpush\t{r7, lr}\n   2:\t2702      \tmovs\tr7, #2\n   4:\t2200      \tmovs\tr2, #0\n   6:\tf2c0 070f \tmovt\tr7, #15\n   a:\tdf00      \tsvc\t0\n   c:\t2800      \tcmp\tr0, #0\n   e:\tbf08      \tit\teq\n  10:\tbd80      \tpopeq\t{r7, pc}\n  ..... \u003cprepare arguments and call compilerrt_abort_impl\u003e\n\n00000000 \u003c__clear_cache\u003e:\n   0:\te92d4080 \tpush\t{r7, lr}\n   4:\te3007002 \tmovw\tr7, #2\n   8:\te3a02000 \tmov\tr2, #0\n   c:\te340700f \tmovt\tr7, #15\n  10:\tef000000 \tsvc\t0x00000000\n  14:\te3500000 \tcmp\tr0, #0\n  18:\t08bd8080 \tpopeq\t{r7, pc}\n  ..... \u003cprepare arguments and call compilerrt_abort_impl\u003e",
+      "revId": "b7c7cb419183a0464d332331c26f50bed67bef7d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
