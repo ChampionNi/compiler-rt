@@ -36,6 +36,7 @@ libcompiler_rt_common_SRC_FILES := \
   lib/ashlti3.c \
   lib/ashrdi3.c \
   lib/ashrti3.c \
+  lib/clear_cache.c \
   lib/clzdi2.c \
   lib/clzsi2.c \
   lib/clzti2.c \
