@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dcb1990e_f051e6a1",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 1003723
+      },
+      "writtenOn": "2014-03-14T23:41:42Z",
+      "side": 1,
+      "message": "nit: looks like 1 space vs 2 space indent versus above",
+      "range": {
+        "startLine": 217,
+        "startChar": 1,
+        "endLine": 217,
+        "endChar": 95
+      },
+      "revId": "9673c4b9dd382514bd89eb52a886affb600ce82c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dcb1990e_b0323e6e",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 320,
+      "author": {
+        "id": 1003723
+      },
+      "writtenOn": "2014-03-14T23:41:42Z",
+      "side": 1,
+      "message": "nit, why whitespace around this one case?\n\nalso the order of adding seems inconsistent. bionic just does alphabetical. taht seems to be true above, but not here",
+      "range": {
+        "startLine": 318,
+        "startChar": 0,
+        "endLine": 320,
+        "endChar": 0
+      },
+      "revId": "9673c4b9dd382514bd89eb52a886affb600ce82c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fcb49dfd_765f10d3",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 1003723
+      },
+      "writtenOn": "2014-03-14T23:41:42Z",
+      "side": 1,
+      "message": "nit: or here",
+      "range": {
+        "startLine": 323,
+        "startChar": 0,
+        "endLine": 323,
+        "endChar": 53
+      },
+      "revId": "9673c4b9dd382514bd89eb52a886affb600ce82c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fcb49dfd_565c14dc",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 337,
+      "author": {
+        "id": 1003723
+      },
+      "writtenOn": "2014-03-14T23:41:42Z",
+      "side": 1,
+      "message": "or here",
+      "range": {
+        "startLine": 337,
+        "startChar": 1,
+        "endLine": 337,
+        "endChar": 53
+      },
+      "revId": "9673c4b9dd382514bd89eb52a886affb600ce82c",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
