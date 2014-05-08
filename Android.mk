@@ -381,8 +381,11 @@ LOCAL_MODULE := libcompiler_rt
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_WHOLE_STATIC_LIBRARIES := libcompiler_rt
 LOCAL_CPPFLAGS := -nostdinc++
+
+ifneq ($(HOST_OS),windows)
 LOCAL_LDFLAGS := -nodefaultlibs
 LOCAL_LDLIBS := -lc -lm
+endif
 LOCAL_MULTILIB := both
 
 include $(BUILD_HOST_SHARED_LIBRARY)

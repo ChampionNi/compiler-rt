@@ -10,7 +10,11 @@
 
 #include "int_lib.h"
 
+#if defined(_WIN32)
+#include <windows.h>
+#else
 #include <sys/mman.h>
+#endif
 
 /* #include "config.h"
  * FIXME: CMake - include when cmake system is ready.
@@ -40,6 +44,10 @@ COMPILER_RT_ABI void
 __enable_execute_stack(void* addr)
 {
 
+#if defined(_WIN32)
+        DWORD oldProtect;
+        (void) VirtualProtect(addr, TRAMPOLINE_SIZE, PAGE_EXECUTE_READWRITE, &oldProtect);
+#else
 #if __APPLE__
 	/* On Darwin, pagesize is always 4096 bytes */
 	const uintptr_t pageSize = 4096;
@@ -55,4 +63,6 @@ __enable_execute_stack(void* addr)
 	unsigned char* endPage = (unsigned char*)((p+TRAMPOLINE_SIZE+pageSize) & pageAlignMask);
 	size_t length = endPage - startPage;
 	(void) mprotect((void *)startPage, length, PROT_READ | PROT_WRITE | PROT_EXEC);
+#endif
 }
+
