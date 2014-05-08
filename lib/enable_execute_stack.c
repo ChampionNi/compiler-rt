@@ -42,6 +42,8 @@ void __enable_execute_stack(void* addr)
 #if __APPLE__
 	/* On Darwin, pagesize is always 4096 bytes */
 	const uintptr_t pageSize = 4096;
+#elif defined (USE_MINGW)
+        const uintptr_t pageSize = 4096;
 #elif !defined(HAVE_SYSCONF)
 #error "HAVE_SYSCONF not defined! See enable_execute_stack.c"
 #else
