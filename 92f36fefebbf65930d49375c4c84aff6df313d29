@@ -1,0 +1,7 @@
+Code-Review+2: Dan Albert <danalbert@google.com>
+Verified+1: Stephen Hines <srhines@google.com>
+Submitted-by: Stephen Hines <srhines@google.com>
+Submitted-at: Thu, 05 Jun 2014 05:46:24 +0000
+Reviewed-on: https://android-review.googlesource.com/96809
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
