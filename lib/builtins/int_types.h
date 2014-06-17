@@ -56,7 +56,7 @@ typedef union
     }s;
 } udwords;
 
-#if __LP64__
+#if defined(__LP64__) && !(defined(ANDROID) && defined(__mips__))
 #define CRT_HAS_128BIT
 #endif
 
