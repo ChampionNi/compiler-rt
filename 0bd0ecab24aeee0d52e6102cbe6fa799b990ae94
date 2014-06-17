@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "440a3515_38dea975",
+        "filename": "lib/builtins/int_types.h",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1010669
+      },
+      "writtenOn": "2014-06-17T03:02:13Z",
+      "side": 1,
+      "message": "Existing mips64 llvm compilers crash on uses of the 128-bit int type.\nAs a temporary workaround, drop the CRT_HAS_128BIT routines that were recently added by the 3.5 (r209699) rebase.  These new routines seem to be unneeded by any existing Android code.\n\nIf the 128-bit int type continues to be unused on Android, then the CRT_HAS_128BIT routines are unneeded for all architectures, and the above #if should be generalised to\n\n#if defined(__LP64__) \u0026\u0026 !defined(ANDROID)",
+      "revId": "0bd0ecab24aeee0d52e6102cbe6fa799b990ae94",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
