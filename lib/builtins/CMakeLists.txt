@@ -93,6 +93,7 @@ set(GENERIC_SOURCES
   mulosi4.c
   muloti4.c
   mulsc3.c
+  fp16.c
   mulsf3.c
   multi3.c
   multf3.c

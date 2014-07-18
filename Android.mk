@@ -111,6 +111,7 @@ libcompiler_rt_common_SRC_FILES := \
   lib/builtins/mulosi4.c \
   lib/builtins/muloti4.c \
   lib/builtins/mulsc3.c \
+  lib/builtins/fp16.c \
   lib/builtins/mulsf3.c \
   lib/builtins/multf3.c \
   lib/builtins/multi3.c \
