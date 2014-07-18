@@ -79,6 +79,7 @@ set(GENERIC_SOURCES
   floatuntidf.c
   floatuntisf.c
   floatuntixf.c
+  fp16.c
   gcc_personality_v0.c
   int_util.c
   lshrdi3.c

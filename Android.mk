@@ -100,6 +100,7 @@ libcompiler_rt_common_SRC_FILES := \
   lib/builtins/floatuntidf.c \
   lib/builtins/floatuntisf.c \
   lib/builtins/floatuntixf.c \
+  lib/builtins/fp16.c \
   lib/builtins/gcc_personality_v0.c \
   lib/builtins/int_util.c \
   lib/builtins/lshrdi3.c \
