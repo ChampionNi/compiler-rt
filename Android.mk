@@ -249,12 +249,25 @@ endef
 #
 # Add ARM runtimes implemented in VFP
 define add-libcompiler-rt-arm-vfp-source-files
-  $(filter-out $(addprefix lib/builtins/,adddf3.c addsf3.c comparedf2.c comparesf2.c         \
-                                         arm/comparesf2.S divdf3.c divsf3.c extendsfdf2.c    \
+  $(filter-out $(addprefix lib/builtins/,adddf3.c addsf3.c omparesf2.c                       \
+                                         divdf3.c divsf3.c extendsfdf2.c                     \
                                          fixdfsi.c fixsfsi.c fixunsdfsi.c fixunssfsi.c       \
                                          floatsidf.c floatsisf.c floatunsidf.c floatunsisf.c \
                                          muldf3.c mulsf3.c negdf2.c negsf2.c subdf3.c        \
-                                         subsf3.c truncdfsf2.c),$(1)) lib/builtins/arm/vfp_alias.S
+                                         subsf3.c truncdfsf2.c),$(1)) \
+  lib/builtins/arm/eqdf2vfp.S \
+  lib/builtins/arm/eqsf2vfp.S \
+  lib/builtins/arm/gedf2vfp.S \
+  lib/builtins/arm/gesf2vfp.S \
+  lib/builtins/arm/gtdf2vfp.S \
+  lib/builtins/arm/gtsf2vfp.S \
+  lib/builtins/arm/ledf2vfp.S \
+  lib/builtins/arm/lesf2vfp.S \
+  lib/builtins/arm/ltdf2vfp.S \
+  lib/builtins/arm/ltsf2vfp.S \
+  lib/builtins/arm/nedf2vfp.S \
+  lib/builtins/arm/nesf2vfp.S \
+  lib/builtins/arm/vfp_alias.S
 endef
 
 define get-libcompiler-rt-arm-source-files
