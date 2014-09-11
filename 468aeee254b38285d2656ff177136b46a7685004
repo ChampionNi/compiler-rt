@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f0168b8e_93a49ea7",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 252,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2014-09-11T15:34:03Z",
+      "side": 1,
+      "message": "This is probably meant to be \"comparesf2.c\".",
+      "range": {
+        "startLine": 252,
+        "startChar": 59,
+        "endLine": 252,
+        "endChar": 68
+      },
+      "revId": "468aeee254b38285d2656ff177136b46a7685004",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
