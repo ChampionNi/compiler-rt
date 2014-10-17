@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "106fa0ad_13adacaa",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2014-10-17T17:49:29Z",
+      "side": 1,
+      "message": "wangying: ADDRESS_SANITIZER_RUNTIME_LIBRARY comes from build/core/clang/config.mk. Is this an okay way to do that? Is this going to have problems with multilib?",
+      "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
