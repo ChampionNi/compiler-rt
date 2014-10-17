@@ -70,6 +70,24 @@
       "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "106fa0ad_d3ded41e",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2014-10-17T17:58:28Z",
+      "side": 1,
+      "message": "I didn\u0027t think so. Is there some $(combo_2nd_arch_prefix) magic that can be done to make it work?",
+      "parentUuid": "908ab09b_82bebca4",
+      "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
