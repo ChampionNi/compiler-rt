@@ -52,6 +52,24 @@
       "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "908ab09b_82bebca4",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1003981
+      },
+      "writtenOn": "2014-10-17T17:54:36Z",
+      "side": 1,
+      "message": "Oh, I didn\u0027t know that. Then it won\u0027t work in multilib build.",
+      "parentUuid": "106fa0ad_d3997488",
+      "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
