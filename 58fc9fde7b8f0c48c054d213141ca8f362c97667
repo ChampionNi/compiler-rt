@@ -124,6 +124,24 @@
       "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "908ab09b_e29ce8d0",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1003981
+      },
+      "writtenOn": "2014-10-17T18:37:01Z",
+      "side": 1,
+      "message": "We may be able to use LOCAL_2ND_ARCH_VAR_PREFIX trick on LOCAL_MODULE_STEM instead of LOCAL_MODULE. You can try the following:\nLOCAL_MODULE :\u003d \u003cwhatever\u003e\nLOCAL_MODULE_STEM \u003d $($(LOCAL_2ND_ARCH_VAR_PREFIX)ADDRESS_SANITIZER_RUNTIME_LIBRARY)\n\nNote that you need to add to build/core/clang/config.mk:\n$(TARGET_2ND_ARCH_VAR_PREFIX)ADDRESS_SANITIZER_RUNTIME_LIBRARY :\u003d libclang_rt.asan_$(TARGET_2ND_ARCH)_android\nAlso do similar to ADDRESS_SANITIZER_CONFIG_EXTRA_SHARED_LIBRARIES",
+      "parentUuid": "106fa0ad_f3b110da",
+      "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
