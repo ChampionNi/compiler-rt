@@ -106,6 +106,24 @@
       "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "106fa0ad_f3b110da",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2014-10-17T18:13:29Z",
+      "side": 1,
+      "message": "We would prefer to leave the arch name in the module names to remain consistent with the upstream names of these modules. It may not be 100% critical, but there might be tools (or tests) that depend on the library being named correctly.",
+      "parentUuid": "708ffcad_44d042d7",
+      "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
