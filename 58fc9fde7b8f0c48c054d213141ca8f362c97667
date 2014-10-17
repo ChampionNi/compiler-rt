@@ -88,6 +88,24 @@
       "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "708ffcad_44d042d7",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1003981
+      },
+      "writtenOn": "2014-10-17T18:09:20Z",
+      "side": 1,
+      "message": "I don\u0027t like that for LOCAL_MODULE is referenced even before the build system set up LOCAL_2ND_ARCH_VAR_PREFIX.\nCan we remove the arch from the module name? \nAfter second thought, I think \"LOCAL_MODULE :\u003d $(ADDRESS_SANITIZER_RUNTIME_LIBRARY)\" actually works - in mutlitlib build we use the TARGET_ARCH to name both the 64-bit and the 32-bit libraries. It may be misleading, but the build system logic is still correct.",
+      "parentUuid": "106fa0ad_d3ded41e",
+      "revId": "58fc9fde7b8f0c48c054d213141ca8f362c97667",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
