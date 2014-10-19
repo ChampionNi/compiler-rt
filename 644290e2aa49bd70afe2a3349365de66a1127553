@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "703d3c9e_2255f647",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2014-10-19T04:43:19Z",
+      "side": 1,
+      "message": "We don\u0027t use -nostdlib with host clang, do we? Then this would not work, as clang driver on linux expects asan runtime to be called libclang_rt.asan-x86_64.a and be located at lib/clang/$VERSION/lib with the other compiler-rt libs.\n\nIf this is a problem, maybe we could link without -fsanitize\u003daddress and specify our own library path. Even then, it should be a static library, as the dynamic ASan runtime on linux is not an officially supported configuration.",
+      "revId": "644290e2aa49bd70afe2a3349365de66a1127553",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
