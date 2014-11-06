@@ -1,0 +1,7 @@
+Code-Review+2: Stephen Hines <srhines@google.com>
+Verified+1: Ying Wang <wangying@android.com>
+Submitted-by: Ying Wang <wangying@android.com>
+Submitted-at: Thu, 06 Nov 2014 23:49:12 +0000
+Reviewed-on: https://android-review.googlesource.com/113531
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
