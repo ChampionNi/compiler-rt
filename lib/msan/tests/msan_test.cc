@@ -570,7 +570,7 @@ TEST(MemorySanitizer, fread) {
   EXPECT_NOT_POISONED(x[16]);
   EXPECT_NOT_POISONED(x[31]);
   fclose(f);
-  delete x;
+  delete[] x;
 }
 
 TEST(MemorySanitizer, read) {
@@ -583,7 +583,7 @@ TEST(MemorySanitizer, read) {
   EXPECT_NOT_POISONED(x[16]);
   EXPECT_NOT_POISONED(x[31]);
   close(fd);
-  delete x;
+  delete[] x;
 }
 
 TEST(MemorySanitizer, pread) {
@@ -596,7 +596,7 @@ TEST(MemorySanitizer, pread) {
   EXPECT_NOT_POISONED(x[16]);
   EXPECT_NOT_POISONED(x[31]);
   close(fd);
-  delete x;
+  delete[] x;
 }
 
 TEST(MemorySanitizer, readv) {
@@ -1483,14 +1483,16 @@ TEST(MemorySanitizer, strcpy) {  // NOLINT
 
 TEST(MemorySanitizer, strncpy) {  // NOLINT
   char* x = new char[3];
-  char* y = new char[3];
+  char* y = new char[5];
   x[0] = 'a';
   x[1] = *GetPoisoned<char>(1, 1);
-  x[2] = 0;
-  strncpy(y, x, 2);  // NOLINT
+  x[2] = '\0';
+  strncpy(y, x, 4);  // NOLINT
   EXPECT_NOT_POISONED(y[0]);
   EXPECT_POISONED(y[1]);
-  EXPECT_POISONED(y[2]);
+  EXPECT_NOT_POISONED(y[2]);
+  EXPECT_NOT_POISONED(y[3]);
+  EXPECT_POISONED(y[4]);
 }
 
 TEST(MemorySanitizer, stpcpy) {  // NOLINT
@@ -2062,7 +2064,25 @@ TEST(MemorySanitizer, fcvt) {
   char *str = fcvt(12345.6789, 10, &a, &b);
   EXPECT_NOT_POISONED(a);
   EXPECT_NOT_POISONED(b);
+  ASSERT_NE(nullptr, str);
+  EXPECT_NOT_POISONED(str[0]);
+  ASSERT_NE(0U, strlen(str));
 }
+
+TEST(MemorySanitizer, fcvt_long) {
+  int a, b;
+  break_optimization(&a);
+  break_optimization(&b);
+  EXPECT_POISONED(a);
+  EXPECT_POISONED(b);
+  char *str = fcvt(111111112345.6789, 10, &a, &b);
+  EXPECT_NOT_POISONED(a);
+  EXPECT_NOT_POISONED(b);
+  ASSERT_NE(nullptr, str);
+  EXPECT_NOT_POISONED(str[0]);
+  ASSERT_NE(0U, strlen(str));
+}
+
 
 TEST(MemorySanitizer, memchr) {
   char x[10];
@@ -2787,7 +2807,7 @@ TEST(MemorySanitizer, scanf) {
   EXPECT_NOT_POISONED(s[4]);
   EXPECT_NOT_POISONED(s[5]);
   EXPECT_POISONED(s[6]);
-  delete s;
+  delete[] s;
   delete d;
 }
 

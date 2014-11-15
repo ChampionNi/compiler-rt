@@ -88,9 +88,9 @@ void __msan_check_mem_is_initialized(const void *x, uptr size);
 SANITIZER_INTERFACE_ATTRIBUTE
 void __msan_set_origin(const void *a, uptr size, u32 origin);
 SANITIZER_INTERFACE_ATTRIBUTE
-void __msan_set_alloca_origin(void *a, uptr size, const char *descr);
+void __msan_set_alloca_origin(void *a, uptr size, char *descr);
 SANITIZER_INTERFACE_ATTRIBUTE
-void __msan_set_alloca_origin4(void *a, uptr size, const char *descr, uptr pc);
+void __msan_set_alloca_origin4(void *a, uptr size, char *descr, uptr pc);
 SANITIZER_INTERFACE_ATTRIBUTE
 u32 __msan_chain_origin(u32 id);
 SANITIZER_INTERFACE_ATTRIBUTE
@@ -160,28 +160,6 @@ void __sanitizer_unaligned_store32(uu32 *p, u32 x);
 
 SANITIZER_INTERFACE_ATTRIBUTE
 void __sanitizer_unaligned_store64(uu64 *p, u64 x);
-
-// ---------------------------
-// FIXME: Replace these functions with __sanitizer equivalent.
-SANITIZER_INTERFACE_ATTRIBUTE
-uptr __msan_get_estimated_allocated_size(uptr size);
-SANITIZER_INTERFACE_ATTRIBUTE
-int __msan_get_ownership(const void *p);
-SANITIZER_INTERFACE_ATTRIBUTE
-uptr __msan_get_allocated_size(const void *p);
-SANITIZER_INTERFACE_ATTRIBUTE
-uptr __msan_get_current_allocated_bytes();
-SANITIZER_INTERFACE_ATTRIBUTE
-uptr __msan_get_heap_size();
-SANITIZER_INTERFACE_ATTRIBUTE
-uptr __msan_get_free_bytes();
-SANITIZER_INTERFACE_ATTRIBUTE
-uptr __msan_get_unmapped_bytes();
-SANITIZER_INTERFACE_ATTRIBUTE SANITIZER_WEAK_ATTRIBUTE
-/* OPTIONAL */ void __msan_malloc_hook(void *ptr, uptr size);
-SANITIZER_INTERFACE_ATTRIBUTE SANITIZER_WEAK_ATTRIBUTE
-/* OPTIONAL */ void __msan_free_hook(void *ptr);
-// ---------------------------
 
 SANITIZER_INTERFACE_ATTRIBUTE
 void __msan_dr_is_initialized();
