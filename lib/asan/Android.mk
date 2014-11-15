@@ -24,6 +24,7 @@ ASAN_FLEXIBLE_MAPPING_AND_OFFSET=0
 asan_rtl_files := \
 	asan_activation.cc	\
 	asan_allocator2.cc	\
+	asan_debugging.cc \
 	asan_fake_stack.cc \
 	asan_globals.cc	\
 	asan_interceptors.cc	\
@@ -41,6 +42,8 @@ asan_rtl_files := \
 	asan_stats.cc	\
 	asan_thread.cc	\
 	asan_win.cc \
+	asan_win_dll_thunk.cc \
+	asan_win_dynamic_runtime_thunk.cc \
 	../interception/interception_linux.cc \
 	../lsan/lsan_common.cc \
 	../lsan/lsan_common_linux.cc \
@@ -63,11 +66,14 @@ asan_rtl_files := \
 	../sanitizer_common/sanitizer_posix.cc \
 	../sanitizer_common/sanitizer_posix_libcdep.cc \
 	../sanitizer_common/sanitizer_printf.cc \
+	../sanitizer_common/sanitizer_procmaps_common.cc \
+	../sanitizer_common/sanitizer_procmaps_freebsd.cc \
 	../sanitizer_common/sanitizer_procmaps_linux.cc \
 	../sanitizer_common/sanitizer_procmaps_mac.cc \
 	../sanitizer_common/sanitizer_stackdepot.cc \
 	../sanitizer_common/sanitizer_stacktrace.cc \
 	../sanitizer_common/sanitizer_stacktrace_libcdep.cc \
+	../sanitizer_common/sanitizer_stacktrace_printer.cc \
 	../sanitizer_common/sanitizer_stoptheworld_linux_libcdep.cc \
 	../sanitizer_common/sanitizer_suppressions.cc \
 	../sanitizer_common/sanitizer_symbolizer.cc \
@@ -77,6 +83,7 @@ asan_rtl_files := \
 	../sanitizer_common/sanitizer_symbolizer_win.cc \
 	../sanitizer_common/sanitizer_thread_registry.cc \
 	../sanitizer_common/sanitizer_tls_get_addr.cc \
+	../sanitizer_common/sanitizer_unwind_posix_libcdep.cc \
 	../sanitizer_common/sanitizer_win.cc
 
 asan_rtl_cflags := \
@@ -90,10 +97,11 @@ asan_rtl_cflags := \
 	-Wno-non-virtual-dtor \
 	-Wno-sign-compare \
 	-Wno-unused-parameter \
+	-std=c++11 \
 
 asan_test_files := \
 	tests/asan_globals_test.cc \
-	tests/asan_test.cc
+	tests/asan_test.cc \
 
 #tests/asan_noinst_test.cc \
 #tests/asan_test_main.cc \
@@ -182,6 +190,7 @@ LOCAL_CFLAGS += \
     -DASAN_HAS_BLACKLIST=1 \
     -DASAN_HAS_EXCEPTIONS=$(ASAN_HAS_EXCEPTIONS) \
     -DASAN_NEEDS_SEGV=$(ASAN_NEEDS_SEGV)
+LOCAL_CPPFLAGS := -std=c++11
 LOCAL_SRC_FILES := tests/asan_noinst_test.cc tests/asan_test_main.cc
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
@@ -262,6 +271,7 @@ LOCAL_CFLAGS += \
     -DASAN_HAS_BLACKLIST=1 \
     -DASAN_HAS_EXCEPTIONS=$(ASAN_HAS_EXCEPTIONS) \
     -DASAN_NEEDS_SEGV=$(ASAN_NEEDS_SEGV)
+LOCAL_CPPFLAGS := -std=c++11
 LOCAL_SRC_FILES := tests/asan_noinst_test.cc tests/asan_test_main.cc
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
