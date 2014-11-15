@@ -39,22 +39,22 @@ static bool msan_running_under_dr;
 // Function argument shadow. Each argument starts at the next available 8-byte
 // aligned address.
 SANITIZER_INTERFACE_ATTRIBUTE
-THREADLOCAL u64 __msan_param_tls[kMsanParamTlsSizeInWords];
+THREADLOCAL u64 __msan_param_tls[kMsanParamTlsSize / sizeof(u64)];
 
 // Function argument origin. Each argument starts at the same offset as the
 // corresponding shadow in (__msan_param_tls). Slightly weird, but changing this
 // would break compatibility with older prebuilt binaries.
 SANITIZER_INTERFACE_ATTRIBUTE
-THREADLOCAL u32 __msan_param_origin_tls[kMsanParamTlsSizeInWords];
+THREADLOCAL u32 __msan_param_origin_tls[kMsanParamTlsSize / sizeof(u32)];
 
 SANITIZER_INTERFACE_ATTRIBUTE
-THREADLOCAL u64 __msan_retval_tls[kMsanRetvalTlsSizeInWords];
+THREADLOCAL u64 __msan_retval_tls[kMsanRetvalTlsSize / sizeof(u64)];
 
 SANITIZER_INTERFACE_ATTRIBUTE
 THREADLOCAL u32 __msan_retval_origin_tls;
 
 SANITIZER_INTERFACE_ATTRIBUTE
-THREADLOCAL u64 __msan_va_arg_tls[kMsanParamTlsSizeInWords];
+THREADLOCAL u64 __msan_va_arg_tls[kMsanParamTlsSize / sizeof(u64)];
 
 SANITIZER_INTERFACE_ATTRIBUTE
 THREADLOCAL u64 __msan_va_arg_overflow_size_tls;
@@ -187,7 +187,7 @@ static void InitializeFlags(Flags *f, const char *options) {
   ParseFlagsFromString(f, options);
 }
 
-void GetStackTrace(StackTrace *stack, uptr max_s, uptr pc, uptr bp,
+void GetStackTrace(BufferedStackTrace *stack, uptr max_s, uptr pc, uptr bp,
                    bool request_fast_unwind) {
   MsanThread *t = GetCurrentThread();
   if (!t || !StackTrace::WillUseFastUnwind(request_fast_unwind)) {
@@ -280,16 +280,19 @@ u32 ChainOrigin(u32 id, StackTrace *stack) {
     }
   }
 
-  StackDepotHandle h = StackDepotPut_WithHandle(stack->trace, stack->size);
+  StackDepotHandle h = StackDepotPut_WithHandle(*stack);
   if (!h.valid()) return id;
-  int use_count = h.use_count();
-  if (use_count > flags()->origin_history_per_stack_limit)
-    return id;
+
+  if (flags()->origin_history_per_stack_limit > 0) {
+    int use_count = h.use_count();
+    if (use_count > flags()->origin_history_per_stack_limit) return id;
+  }
 
   u32 chained_id;
   bool inserted = ChainedOriginDepotPut(h.id(), o.id(), &chained_id);
 
-  if (inserted) h.inc_use_count_unsafe();
+  if (inserted && flags()->origin_history_per_stack_limit > 0)
+    h.inc_use_count_unsafe();
 
   return Origin(chained_id, depth).raw_id();
 }
@@ -377,6 +380,7 @@ void __msan_init() {
 
   if (MSAN_REPLACE_OPERATORS_NEW_AND_DELETE)
     ReplaceOperatorsNewAndDelete();
+  DisableCoreDumperIfNecessary();
   if (StackSizeIsUnlimited()) {
     VPrintf(1, "Unlimited stack, doing reexec\n");
     // A reasonably large stack size. It is bigger than the usual 8Mb, because,
@@ -401,8 +405,7 @@ void __msan_init() {
     Die();
   }
 
-  Symbolizer::Init(common_flags()->external_symbolizer_path);
-  Symbolizer::Get()->AddHooks(EnterSymbolizer, ExitSymbolizer);
+  Symbolizer::GetOrInit()->AddHooks(EnterSymbolizer, ExitSymbolizer);
 
   MsanTSDInit(MsanTSDDtor);
 
@@ -482,7 +485,7 @@ void __msan_check_mem_is_initialized(const void *x, uptr size) {
   (void)sp;
   ReportUMRInsideAddressRange(__func__, x, size, offset);
   __msan::PrintWarningWithOrigin(pc, bp,
-                                 __msan_get_origin(((char *)x) + offset));
+                                 __msan_get_origin(((const char *)x) + offset));
   if (__msan::flags()->halt_on_error) {
     Printf("Exiting\n");
     Die();
@@ -562,11 +565,11 @@ void __msan_set_origin(const void *a, uptr size, u32 origin) {
 // 'descr' is created at compile time and contains '----' in the beginning.
 // When we see descr for the first time we replace '----' with a uniq id
 // and set the origin to (id | (31-th bit)).
-void __msan_set_alloca_origin(void *a, uptr size, const char *descr) {
+void __msan_set_alloca_origin(void *a, uptr size, char *descr) {
   __msan_set_alloca_origin4(a, size, descr, 0);
 }
 
-void __msan_set_alloca_origin4(void *a, uptr size, const char *descr, uptr pc) {
+void __msan_set_alloca_origin4(void *a, uptr size, char *descr, uptr pc) {
   static const u32 dash = '-';
   static const u32 first_timer =
       dash + (dash << 8) + (dash << 16) + (dash << 24);
