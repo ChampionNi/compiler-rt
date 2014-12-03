@@ -185,10 +185,12 @@ libcompiler_rt_arm_SRC_FILES := \
   lib/builtins/arm/modsi3.S \
   lib/builtins/arm/udivmodsi4.S \
   lib/builtins/arm/udivsi3.S \
-  lib/builtins/arm/umodsi3.S
+  lib/builtins/arm/umodsi3.S \
+  lib/builtins/arm/fpstatus.c
 
 # ARM64-specific runtimes
-libcompiler_rt_arm64_SRC_FILES :=
+libcompiler_rt_arm64_SRC_FILES := \
+  lib/builtins/arm64/fpstatus.c
 
 # MIPS-specific runtimes
 libcompiler_rt_mips_SRC_FILES := # nothing to add
@@ -209,7 +211,8 @@ libcompiler_rt_x86_SRC_FILES := \
   lib/builtins/i386/moddi3.S \
   lib/builtins/i386/muldi3.S \
   lib/builtins/i386/udivdi3.S \
-  lib/builtins/i386/umoddi3.S
+  lib/builtins/i386/umoddi3.S \
+  lib/builtins/i386/fpstatus.c
 
 # X86_64-specific runtimes
 libcompiler_rt_x86_64_SRC_FILES := \
@@ -218,7 +221,8 @@ libcompiler_rt_x86_64_SRC_FILES := \
   lib/builtins/x86_64/floatdidf.c \
   lib/builtins/x86_64/floatdixf.c \
   lib/builtins/x86_64/floatundisf.S \
-  lib/builtins/x86_64/floatundidf.S
+  lib/builtins/x86_64/floatundidf.S \
+  lib/builtins/x86_64/fpstatus.c
 
 # The following list contains functions that are not available in libgcc.a, so
 # we potentially need them when using a Clang-built component (e.g., -ftrapv
@@ -336,11 +340,15 @@ LOCAL_CFLAGS_arm += -D__ARM_EABI__
 LOCAL_ASFLAGS := -integrated-as
 LOCAL_CLANG := true
 LOCAL_SRC_FILES_arm := $(call get-libcompiler-rt-source-files,arm)
+LOCAL_C_INCLUDES_arm:= $(LOCAL_PATH)/lib/builtins/arm
 LOCAL_SRC_FILES_arm64 := $(call get-libcompiler-rt-source-files,arm64)
+LOCAL_C_INCLUDES_arm64 := $(LOCAL_PATH)/lib/builtins/arm64
 LOCAL_SRC_FILES_mips := $(call get-libcompiler-rt-source-files,mips)
 LOCAL_SRC_FILES_mips64 := $(call get-libcompiler-rt-source-files,mips64)
 LOCAL_SRC_FILES_x86 := $(call get-libcompiler-rt-source-files,x86)
+LOCAL_C_INCLUDES_x86:= $(LOCAL_PATH)/lib/builtins/i386
 LOCAL_SRC_FILES_x86_64 := $(call get-libcompiler-rt-source-files,x86_64)
+LOCAL_C_INCLUDES_x86_64:= $(LOCAL_PATH)/lib/builtins/x86_64
 LOCAL_MODULE_TARGET_ARCH := arm arm64 mips mips64 x86 x86_64
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_ADDRESS_SANITIZER := false
@@ -357,6 +365,7 @@ LOCAL_MODULE := libcompiler_rt
 LOCAL_ASFLAGS := -integrated-as
 LOCAL_CLANG := true
 LOCAL_SRC_FILES := $(call get-libcompiler-rt-source-files,x86_64)
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/lib/builtins/x86_64
 LOCAL_ADDRESS_SANITIZER := false
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_MULTILIB := both

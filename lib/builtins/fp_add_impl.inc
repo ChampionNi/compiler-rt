@@ -7,12 +7,12 @@
 //
 //===----------------------------------------------------------------------===//
 //
-// This file implements soft-float addition with the IEEE-754 default rounding
-// (to nearest, ties to even).
+// This file implements soft-float addition.
 //
 //===----------------------------------------------------------------------===//
 
 #include "fp_lib.h"
+#include "fpstatus.h"
 
 static inline fp_t __addXf3__(fp_t a, fp_t b) {
     rep_t aRep = toRep(a);
@@ -126,8 +126,6 @@ static inline fp_t __addXf3__(fp_t a, fp_t b) {
         aExponent = 0;
     }
 
-    // Low three bits are round, guard, and sticky.
-    const int roundGuardSticky = aSignificand & 0x7;
 
     // Shift the significand into place, and mask off the implicit bit.
     rep_t result = aSignificand >> 3 & significandMask;
@@ -138,7 +136,29 @@ static inline fp_t __addXf3__(fp_t a, fp_t b) {
 
     // Final rounding.  The result may overflow to infinity, but that is the
     // correct result in that case.
-    if (roundGuardSticky > 0x4) result++;
-    if (roundGuardSticky == 0x4) result += result & 1;
+    // Low three bits are round, guard, and sticky.
+    const int roundGuardSticky = aSignificand & 0x7;
+    switch (__fpgetround()) {
+        case FE_TONEAREST:
+            if (roundGuardSticky > 4)
+                result++;
+            if (roundGuardSticky == 4)
+                result += result&1;
+            break;
+        case FE_UPWARD:
+            if (!resultSign && roundGuardSticky)
+                result++;
+            break;
+        case FE_DOWNWARD:
+            if (resultSign && roundGuardSticky)
+                result++;
+            break;
+        case FE_TOWARDZERO:
+        default:
+            break;
+    }
+    if (roundGuardSticky)
+        __fpraiseexcept(FE_INEXACT);
+
     return fromRep(result);
 }
