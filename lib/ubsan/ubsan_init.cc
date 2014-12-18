@@ -43,6 +43,7 @@ void __ubsan::InitIfNecessary() {
   // Initialize UBSan-specific flags.
   InitializeFlags();
   SuppressionContext::InitIfNecessary();
+  AndroidLogInit();
   ubsan_inited = true;
 }
 
