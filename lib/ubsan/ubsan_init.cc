@@ -43,6 +43,7 @@ void __ubsan::InitIfNecessary() {
   }
   // Initialize UBSan-specific flags.
   InitializeFlags(standalone);
+  AndroidLogInit();
   InitializeSuppressions();
   InitializeCoverage(common_flags()->coverage, common_flags()->coverage_dir);
   ubsan_inited = true;

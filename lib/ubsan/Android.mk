@@ -40,6 +40,29 @@ ubsan_rtl_cppflags := \
 ubsan_rtl_c_includes := \
     external/compiler-rt/lib \
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libubsan
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(ubsan_rtl_c_includes)
+LOCAL_CPPFLAGS := $(ubsan_rtl_cppflags) -Wno-error=non-virtual-dtor
+LOCAL_RTTI_FLAG := -frtti
+LOCAL_SRC_FILES := $(ubsan_rtl_files)
+LOCAL_CXX_STL := none
+LOCAL_ADDRESS_SANITIZER := false
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libubsan_cxx
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(ubsan_rtl_c_includes)
+LOCAL_CPPFLAGS := $(ubsan_rtl_cppflags)
+LOCAL_RTTI_FLAG := -frtti
+LOCAL_SRC_FILES := $(ubsan_cxx_rtl_files)
+LOCAL_ADDRESS_SANITIZER := false
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
+
 ifneq ($(HOST_OS),darwin)
 
 include $(CLEAR_VARS)
