@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0b7777c2_f98daf93",
+        "filename": "lib/builtins/clear_cache.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1041833
+      },
+      "writtenOn": "2015-01-15T23:46:39Z",
+      "side": 1,
+      "message": "You need additionally syscall, or for consistency unistd like in the arm case.",
+      "range": {
+        "startLine": 21,
+        "startChar": 2,
+        "endLine": 21,
+        "endChar": 27
+      },
+      "revId": "944cedceeb56b07b9e8dc41e50fe70651e645f48",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
