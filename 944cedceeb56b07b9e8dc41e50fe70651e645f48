@@ -22,6 +22,47 @@
       "revId": "944cedceeb56b07b9e8dc41e50fe70651e645f48",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6bc55323_91179e69",
+        "filename": "lib/builtins/clear_cache.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2015-01-15T23:53:36Z",
+      "side": 1,
+      "message": "you only needed this if you were using the old LP32-only code which is removed in this patch :-)",
+      "parentUuid": "0b7777c2_f98daf93",
+      "range": {
+        "startLine": 21,
+        "startChar": 2,
+        "endLine": 21,
+        "endChar": 27
+      },
+      "revId": "944cedceeb56b07b9e8dc41e50fe70651e645f48",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "abdbcb04_53337697",
+        "filename": "lib/builtins/clear_cache.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2015-01-15T23:53:36Z",
+      "side": 1,
+      "message": "this should be\n\n  #include \u003cunistd.h\u003e\n  #include \u003csys/syscall.h\u003e\n\n(and, yes, mips and arm should share this.)",
+      "revId": "944cedceeb56b07b9e8dc41e50fe70651e645f48",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
