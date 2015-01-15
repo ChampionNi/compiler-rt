@@ -62,7 +62,7 @@ void __clear_cache(void *start, void *end) {
 #elif defined(__ANDROID__) && defined(__mips__)
   const uintptr_t start_int = (uintptr_t) start;
   const uintptr_t end_int = (uintptr_t) end;
-  _flush_cache(start, (end_int - start_int), BCACHE);
+  syscall(__NR_cacheflush, start, (end_int - start_int), BCACHE);
 #elif defined(__aarch64__) && !defined(__APPLE__)
   uint64_t xstart = (uint64_t)(uintptr_t) start;
   uint64_t xend = (uint64_t)(uintptr_t) end;
