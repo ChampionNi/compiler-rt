@@ -20,6 +20,7 @@
 #if defined(__ANDROID__) && defined(__mips__)
   #include <sys/cachectl.h>
   #include <sys/syscall.h>
+  #include <unistd.h>
   #ifdef __LP64__
     /*
      * clear_mips_cache - Invalidates instruction cache for Mips.
