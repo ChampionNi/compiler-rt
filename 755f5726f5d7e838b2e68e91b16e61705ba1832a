@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f73f74b3_50ecac10",
+        "filename": "Blueprints",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-03-05T06:35:35Z",
+      "side": 1,
+      "message": "We should probably call this \"android\". Maybe s/target/os/ as well, since target is a heavily overloaded term already.",
+      "revId": "755f5726f5d7e838b2e68e91b16e61705ba1832a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d70d102d_fafa65c3",
+        "filename": "Blueprints",
+        "patchSetId": 1
+      },
+      "lineNbr": 590,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-03-05T06:35:35Z",
+      "side": 1,
+      "message": "host_ldlibs?",
+      "revId": "755f5726f5d7e838b2e68e91b16e61705ba1832a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
