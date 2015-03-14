@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2639e0d0_85d1b285",
+        "filename": "Blueprints",
+        "patchSetId": 2
+      },
+      "lineNbr": 343,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-03-14T04:02:38Z",
+      "side": 1,
+      "message": "No more shared compiler-rt?",
+      "revId": "5a351b791f3fbd70618242acbeff56b25a5ecc5a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2639e0d0_e53abe47",
+        "filename": "Blueprints",
+        "patchSetId": 2
+      },
+      "lineNbr": 567,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-03-14T04:02:38Z",
+      "side": 1,
+      "message": "You dropped one",
+      "revId": "5a351b791f3fbd70618242acbeff56b25a5ecc5a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
