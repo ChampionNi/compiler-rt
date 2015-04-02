@@ -16,6 +16,24 @@
       "revId": "e83d5a6571fa8abc4bba043369da92ae135fa86b",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83e35e1e_ecab4b85",
+        "filename": "lib/ubsan/ubsan_init.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-04-02T09:19:27Z",
+      "side": 1,
+      "message": "We should be able to commit it upstream as-is.\nASan already does it.\nBut you probably need to check for (standalone), otherwise it is already initialized by this time.",
+      "parentUuid": "63de6a5c_4eadb313",
+      "revId": "e83d5a6571fa8abc4bba043369da92ae135fa86b",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
