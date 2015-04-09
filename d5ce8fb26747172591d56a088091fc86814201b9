@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "636d8ab3_b935b70d",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-04-09T20:52:33Z",
+      "side": 1,
+      "message": "Isn\u0027t all this stuff now part of your new Android.mk file?",
+      "revId": "d5ce8fb26747172591d56a088091fc86814201b9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
