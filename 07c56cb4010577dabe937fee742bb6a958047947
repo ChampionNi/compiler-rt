@@ -1,0 +1,9 @@
+Code-Review+2: Dimitry Ivanov <dimitry@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Code-Review+1: Evgeniy Stepanov <eugenis@google.com>
+Verified+1: Stephen Hines <srhines@google.com>
+Submitted-by: Stephen Hines <srhines@google.com>
+Submitted-at: Fri, 24 Apr 2015 22:25:58 +0000
+Reviewed-on: https://android-review.googlesource.com/148187
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
