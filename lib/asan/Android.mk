@@ -157,6 +157,13 @@ LOCAL_STATIC_LIBRARIES := libcompiler_rt
 LOCAL_CLANG := true
 LOCAL_ADDRESS_SANITIZER := false
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
+
+# MacOS toolchain is out-of-date and does not support -z global.
+# TODO: re-enable once the toolchain issue is fixed.
+ifneq ($(HOST_OS),darwin)
+  LOCAL_LDFLAGS += -Wl,-z,global
+endif
+
 include $(BUILD_SHARED_LIBRARY)
 
 
