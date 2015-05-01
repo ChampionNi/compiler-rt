@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d078be71_768890ba",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-05-01T17:54:35Z",
+      "side": 0,
+      "message": "I think you want this to be \"optional\" now. If you remove the tag entirely, I am not sure what the default is (and if that means it will ship no matter what).",
+      "revId": "2da1a85577508339ed4b7cca3da79939bcbb9be6",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
