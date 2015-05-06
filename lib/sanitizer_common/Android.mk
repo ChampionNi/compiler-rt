@@ -72,6 +72,29 @@ san_rtl_cppflags := \
 san_rtl_c_includes := \
     external/compiler-rt/lib \
 
+################################################################################
+# Target modules
+
+ifeq ($(TARGET_ARCH),arm)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsan
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(san_rtl_c_includes)
+LOCAL_CPPFLAGS := $(san_rtl_cppflags)
+# FIXME Two warnings need to be disabled for the target
+LOCAL_CPPFLAGS := $(LOCAL_CPPFLAGS) -Wno-non-virtual-dtor -Wno-maybe-uninitialized
+LOCAL_SRC_FILES := $(san_rtl_files) $(san_cdep_files)
+LOCAL_CXX_STL := none
+LOCAL_ADDRESS_SANITIZER := false
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
+
+endif # ($(TARGET_ARCH),arm)
+
+################################################################################
+# Host modules
+
 ifneq ($(HOST_OS),darwin)
 
 include $(CLEAR_VARS)
