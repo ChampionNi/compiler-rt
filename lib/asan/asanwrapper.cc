@@ -31,6 +31,10 @@ int main(int argc, char** argv) {
   // TODO(eugenis): rewrite to <dirname>/asan/<basename>, if exists?
   if (strcmp(argv[1], "/system/bin/app_process") == 0) {
     args[0] = (char*)"/system/bin/asan/app_process";
+  } else if (strcmp(argv[1], "/system/bin/app_process32") == 0) {
+    args[0] = (char*)"/system/bin/asan/app_process32";
+  } else if (strcmp(argv[1], "/system/bin/app_process64") == 0) {
+    args[0] = (char*)"/system/bin/asan/app_process64";
   } else {
     args[0] = argv[1];
   }
@@ -39,12 +43,11 @@ int main(int argc, char** argv) {
     args[i] = argv[i + 1];
   args[argc - 1] = 0;
 
-  env_prepend("LD_LIBRARY_PATH", "/system/lib/asan", ":");
-  env_prepend("LD_PRELOAD", "/system/lib/libclang_rt.asan_arm_android.so", ":");
+  env_prepend("LD_LIBRARY_PATH", "/system/lib/asan:/system/lib", ":");
+  env_prepend("ASAN_OPTIONS", "allow_user_segv_handler=1", ",");
 
   printf("ASAN_OPTIONS: %s\n", getenv("ASAN_OPTIONS"));
   printf("LD_LIBRARY_PATH: %s\n", getenv("LD_LIBRARY_PATH"));
-  printf("LD_PRELOAD: %s\n", getenv("LD_PRELOAD"));
 
   execv(args[0], args);
 }
