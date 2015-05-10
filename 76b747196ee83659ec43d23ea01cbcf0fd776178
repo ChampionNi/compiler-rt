@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d70e1c2_98f58c9c",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-05-10T20:03:28Z",
+      "side": 0,
+      "message": "By the way, this is apparently why the asan tests have been broken on the bot lately (because it\u0027s asan-arm-android). Once this CL goes in the bot should be fixed.",
+      "revId": "76b747196ee83659ec43d23ea01cbcf0fd776178",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}

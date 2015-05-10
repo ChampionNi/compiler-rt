@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d6d15ec_6b7bfe3b",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-05-10T20:03:28Z",
+      "side": 1,
+      "message": "Doesn\u0027t LLVM prefer `\u003d\u003d -1`? We certainly do, but upstream conventions are what matter here.",
+      "range": {
+        "startLine": 32,
+        "startChar": 9,
+        "endLine": 32,
+        "endChar": 12
+      },
+      "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d679d0f_adcff5d9",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-05-10T20:03:28Z",
+      "side": 1,
+      "message": "Body with more than one statement should be on multiple lines.",
+      "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2d70e1c2_38fa4089",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-05-10T20:03:28Z",
+      "side": 1,
+      "message": "Google style is always have braces if you have an else. Not sure about LLVM style.",
+      "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d6d15ec_0b804293",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-05-10T20:03:28Z",
+      "side": 1,
+      "message": "Debugging code?",
+      "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
