@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "2d338121_01bcca46",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-05-11T23:03:18Z",
+      "side": 1,
+      "message": "This should not be needed.\n\nHost build links asan runtime from prebuilts/. Do you need to update those? You may need to add \"libubsan\" to host \"libasan\" deps.",
+      "revId": "350646ce52c7789b82b1e9cc45cb32656be7205e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d679d0f_84b8c30a",
+        "filename": "lib/sanitizer_common/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-05-11T23:03:18Z",
+      "side": 1,
+      "message": "This target seems unused.",
+      "revId": "350646ce52c7789b82b1e9cc45cb32656be7205e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad3e91ea_1dbd53f9",
+        "filename": "lib/ubsan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-05-11T23:03:18Z",
+      "side": 1,
+      "message": "Please rename it to just \"libubsan\".\n\nubsan_standalone would be the one that includes ubsan_init_standalone.cc, and probably a shared library. This is something that we did not have on Android (target) before, I can add the build rule later.",
+      "revId": "350646ce52c7789b82b1e9cc45cb32656be7205e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4d6d15ec_e8cdc637",
         "filename": "lib/ubsan/Android.mk",
         "patchSetId": 1
