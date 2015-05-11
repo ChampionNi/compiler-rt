@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4d6d15ec_5ddb5968",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-05-11T20:31:05Z",
+      "side": 1,
+      "message": "Done.\nThis file is a local addition, so it does not really have to follow upstream conventions.",
+      "parentUuid": "4d6d15ec_6b7bfe3b",
+      "range": {
+        "startLine": 32,
+        "startChar": 9,
+        "endLine": 32,
+        "endChar": 12
+      },
+      "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0d679d0f_adcff5d9",
         "filename": "lib/asan/asanwrapper.cc",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2015-05-10T20:03:28Z",
       "side": 1,
       "message": "Body with more than one statement should be on multiple lines.",
+      "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d6d15ec_3dfb05bb",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-05-11T20:31:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0d679d0f_adcff5d9",
       "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
@@ -70,6 +112,24 @@
       "writtenOn": "2015-05-10T20:03:28Z",
       "side": 1,
       "message": "Debugging code?",
+      "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d6d15ec_fdd58de0",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-05-11T20:31:05Z",
+      "side": 1,
+      "message": "Yes, but so are the two lines above. This does not appear too often, especially as executables can be run w/o asanwrapper since the -z global fix, so I\u0027d prefer to keep it if you don\u0027t mind.",
+      "parentUuid": "4d6d15ec_0b804293",
       "revId": "a97ab9ca3a27cc375e12f925391b75d1b44d40bc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
