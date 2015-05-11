@@ -34,6 +34,24 @@
       "revId": "76b747196ee83659ec43d23ea01cbcf0fd776178",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d679d0f_ee4f2090",
+        "filename": "lib/asan/asanwrapper.cc",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-05-11T20:33:04Z",
+      "side": 0,
+      "message": "It was a few weeks ago, I believe. Yes, we\u0027ve been using the wrong asan library since then (which is why it\u0027s been broken since then).",
+      "parentUuid": "2d70e1c2_cd9c9b6b",
+      "revId": "76b747196ee83659ec43d23ea01cbcf0fd776178",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
