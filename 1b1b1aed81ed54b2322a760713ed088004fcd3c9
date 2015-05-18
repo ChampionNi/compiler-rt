@@ -1,0 +1,7 @@
+Code-Review+2: Dan Albert <danalbert@google.com>
+Verified+1: Bionic Buildbot <bionicbb@android.com>
+Submitted-by: Evgeniy Stepanov <eugenis@google.com>
+Submitted-at: Mon, 18 May 2015 22:53:54 +0000
+Reviewed-on: https://android-review.googlesource.com/151145
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
