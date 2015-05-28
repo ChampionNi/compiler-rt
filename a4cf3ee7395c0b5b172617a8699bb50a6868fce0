@@ -1,0 +1,7 @@
+Verified+1: Bionic Buildbot <bionicbb@android.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Submitted-by: Pirama Arumuga Nainar <pirama@google.com>
+Submitted-at: Thu, 28 May 2015 16:26:55 +0000
+Reviewed-on: https://android-review.googlesource.com/151542
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
