@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "597cfc56_1f34b108",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-06-16T21:03:15Z",
+      "side": 1,
+      "message": "LOCAL_STATIC_LIBRARIES_arm :\u003d libunwind_llvm\n\nWe use libgcc for all the other architectures.",
+      "revId": "711545224eece6e8a47ed7641ce34ea6a2a58907",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
