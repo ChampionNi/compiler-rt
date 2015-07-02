@@ -13,8 +13,6 @@
 #include "addsf3vfp.S"
 #include "divdf3vfp.S"
 #include "divsf3vfp.S"
-#include "eqdf2vfp.S"
-#include "eqsf2vfp.S"
 #include "extendsfdf2vfp.S"
 #include "fixdfsivfp.S"
 #include "fixsfsivfp.S"
@@ -55,8 +53,6 @@ DEFINE_VFP_AND_AEABI_ALIAS(__aeabi_dadd, __adddf3)
 DEFINE_VFP_AND_AEABI_ALIAS(__aeabi_fadd, __addsf3)
 DEFINE_VFP_AND_AEABI_ALIAS(__aeabi_ddiv, __divdf3)
 DEFINE_VFP_AND_AEABI_ALIAS(__aeabi_fdiv, __divsf3)
-DEFINE_VFP_FUNCTION_ALIAS(__eqdf2)
-DEFINE_VFP_FUNCTION_ALIAS(__eqsf2)
 DEFINE_VFP_AND_AEABI_ALIAS(__aeabi_f2d, __extendsfdf2)
 DEFINE_VFP_AND_AEABI_ALIAS(__aeabi_d2iz, __fixdfsi)
 DEFINE_VFP_AND_AEABI_ALIAS(__aeabi_f2iz, __fixsfsi)
