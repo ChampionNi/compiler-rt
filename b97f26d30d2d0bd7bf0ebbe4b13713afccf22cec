@@ -22,6 +22,30 @@
       "revId": "b97f26d30d2d0bd7bf0ebbe4b13713afccf22cec",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58823a52_755aa2c7",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-07-17T01:29:11Z",
+      "side": 1,
+      "message": "replaced with \"aosp_shamu\", does it look better this way?",
+      "parentUuid": "586b1a6a_10332cff",
+      "range": {
+        "startLine": 151,
+        "startChar": 92,
+        "endLine": 152,
+        "endChar": 13
+      },
+      "revId": "b97f26d30d2d0bd7bf0ebbe4b13713afccf22cec",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
