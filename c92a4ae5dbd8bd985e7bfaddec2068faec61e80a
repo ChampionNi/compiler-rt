@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2af28c55_09c2719b",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-07-30T00:23:52Z",
+      "side": 1,
+      "message": "Should we just wrap this entire Android.mk with these two comparisons? I think that is better than 3 separate instances with intervening dead assignments for all other builds.",
+      "revId": "c92a4ae5dbd8bd985e7bfaddec2068faec61e80a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a11e441_4e23d3dd",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-07-30T00:23:52Z",
+      "side": 1,
+      "message": "Please put a comment at the end of each of these 2 lines when you wrap the whole file so that it is obvious where these correspond to. Something simple like # $(HOST_OS) \u003d\u003d linux.",
+      "revId": "c92a4ae5dbd8bd985e7bfaddec2068faec61e80a",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
