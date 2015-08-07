@@ -111,6 +111,7 @@ libcompiler_rt_common_SRC_FILES := \
   lib/builtins/int_util.c \
   lib/builtins/lshrdi3.c \
   lib/builtins/lshrti3.c \
+  lib/builtins/missing.c \
   lib/builtins/moddi3.c \
   lib/builtins/modsi3.c \
   lib/builtins/modti3.c \
@@ -218,6 +219,7 @@ libcompiler_rt_arm_SRC_FILES := \
   lib/builtins/arm/lesf2vfp.S \
   lib/builtins/arm/ltdf2vfp.S \
   lib/builtins/arm/ltsf2vfp.S \
+  lib/builtins/arm/missing_arm.c \
   lib/builtins/arm/muldf3vfp.S \
   lib/builtins/arm/mulsf3vfp.S \
   lib/builtins/arm/nedf2vfp.S \
@@ -383,7 +385,6 @@ LOCAL_SRC_FILES_mips := $(call get-libcompiler-rt-source-files,mips)
 LOCAL_SRC_FILES_mips64 := $(call get-libcompiler-rt-source-files,mips64)
 LOCAL_SRC_FILES_x86 := $(call get-libcompiler-rt-source-files,x86)
 LOCAL_SRC_FILES_x86_64 := $(call get-libcompiler-rt-source-files,x86_64)
-LOCAL_SRC_FILES_x86_64 += lib/builtins/ppc/floatditf.c
 LOCAL_MODULE_TARGET_ARCH := arm arm64 mips mips64 x86 x86_64
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_SANITIZE := never
