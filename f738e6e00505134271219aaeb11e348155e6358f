@@ -16,6 +16,24 @@
       "revId": "f738e6e00505134271219aaeb11e348155e6358f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7242fa6_56bc9455",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-07T00:32:27Z",
+      "side": 1,
+      "message": "Oops. Yes, this was dumb. Don\u0027t need this macro at all. ps2 fixes this.",
+      "parentUuid": "070ea328_779d5046",
+      "revId": "f738e6e00505134271219aaeb11e348155e6358f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
