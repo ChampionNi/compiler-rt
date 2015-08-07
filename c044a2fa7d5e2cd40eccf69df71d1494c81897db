@@ -16,6 +16,24 @@
       "revId": "c044a2fa7d5e2cd40eccf69df71d1494c81897db",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7aeef64_660eeec6",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-08-07T23:12:04Z",
+      "side": 0,
+      "message": "Yes, I had to add this recently to the build because of the bionic math tests I think. It really should get promoted out of ppc, but I wanted to fix it without making an upstream change (and then having to cherry-pick it back). I would like to understand more about why the compiler for x86_64 is generating a call to __floatditf(), but I didn\u0027t get to digging on that yet either.",
+      "parentUuid": "47bedb91_69a24585",
+      "revId": "c044a2fa7d5e2cd40eccf69df71d1494c81897db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
