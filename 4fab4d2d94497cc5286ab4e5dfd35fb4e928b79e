@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c7a9eb5f_852d2299",
+        "filename": "lib/builtins/missing.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-07T22:10:52Z",
+      "side": 1,
+      "message": "This is an interesting one because it\u0027s an implementation detail of the popcount builtins. The current compiler-rt implementation doesn\u0027t use the table based method, so this isn\u0027t strictly needed, but is needed by bionic/libc/arch-arm/bionic/libgcc_compat.c",
+      "revId": "4fab4d2d94497cc5286ab4e5dfd35fb4e928b79e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}

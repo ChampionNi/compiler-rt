@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "47bedb91_69a24585",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 386,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-07T22:10:52Z",
+      "side": 0,
+      "message": "This is weird. ppc?",
+      "revId": "c044a2fa7d5e2cd40eccf69df71d1494c81897db",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
