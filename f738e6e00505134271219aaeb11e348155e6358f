@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "070ea328_779d5046",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-08-07T00:24:35Z",
+      "side": 1,
+      "message": "I think you only need this line (i.e. the \"$(if $(findstring...\" is no longer necessary).",
+      "revId": "f738e6e00505134271219aaeb11e348155e6358f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
