@@ -179,7 +179,9 @@ endif
 libcompiler_rt_arm_SRC_FILES := \
   lib/builtins/arm/aeabi_dcmp.S \
   lib/builtins/arm/aeabi_div0.c \
+  lib/builtins/arm/aeabi_drsub.c \
   lib/builtins/arm/aeabi_fcmp.S \
+  lib/builtins/arm/aeabi_frsub.c \
   lib/builtins/arm/aeabi_idivmod.S \
   lib/builtins/arm/aeabi_ldivmod.S \
   lib/builtins/arm/aeabi_memcmp.S \
@@ -485,7 +487,6 @@ LOCAL_NO_LIBGCC := true
 
 include $(BUILD_HOST_SHARED_LIBRARY)
 
-# Build asan, lsan, etc.
-include $(call all-makefiles-under,$(LOCAL_PATH)/lib)
-
+# Build asan, lsan, tests, etc.
+include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
