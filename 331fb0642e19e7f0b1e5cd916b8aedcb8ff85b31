@@ -1,0 +1,204 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "04b861a5_9c449120",
+        "filename": "lib/builtins/subdf3.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "drop",
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4a8755c_59aceff7",
+        "filename": "lib/builtins/subsf3.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "Drop extra line",
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4a9e95f_ba471572",
+        "filename": "test/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "2015",
+      "range": {
+        "startLine": 2,
+        "startChar": 16,
+        "endLine": 2,
+        "endChar": 20
+      },
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "64591d73_346cb026",
+        "filename": "test/builtins/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "2015",
+      "range": {
+        "startLine": 2,
+        "startChar": 16,
+        "endLine": 2,
+        "endChar": 20
+      },
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4fb1585_2073d28f",
+        "filename": "test/builtins/Unit/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "2015",
+      "range": {
+        "startLine": 2,
+        "startChar": 16,
+        "endLine": 2,
+        "endChar": 20
+      },
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4a8755c_f9bcbb22",
+        "filename": "test/builtins/Unit/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "I don\u0027t see this anywhere in the tree. Why do we need it?",
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "243ac5f6_cf82090d",
+        "filename": "test/builtins/Unit/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "Should only need LOCAL_STATIC_LIBRARIES",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 28
+      },
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "243ac5f6_af7fc584",
+        "filename": "test/builtins/Unit/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "Same here",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 28
+      },
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4a9e95f_9aa339b3",
+        "filename": "test/builtins/Unit/arm/aeabi_drsub_test.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "brace goes on previous line (and elsewhere in tests)",
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04b861a5_fcd02dc3",
+        "filename": "test/builtins/Unit/arm/aeabi_drsub_test.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-15T00:47:07Z",
+      "side": 1,
+      "message": "You\u0027ll want to actually hard code the expected values (make it a parameter to the function). This operation might just end up being replaced by the compiler to call the (possibly broken) builtin. Look at floatdixf_test.c (or probably most other tests in the directory) for an example.",
+      "revId": "331fb0642e19e7f0b1e5cd916b8aedcb8ff85b31",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
