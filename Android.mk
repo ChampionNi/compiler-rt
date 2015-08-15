@@ -177,6 +177,8 @@ endif
 
 # ARM-specific runtimes
 libcompiler_rt_arm_SRC_FILES := \
+  lib/builtins/arm/aeabi_cdcmp.S \
+  lib/builtins/arm/aeabi_cfcmp.S \
   lib/builtins/arm/aeabi_dcmp.S \
   lib/builtins/arm/aeabi_div0.c \
   lib/builtins/arm/aeabi_drsub.c \

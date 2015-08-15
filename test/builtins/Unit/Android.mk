@@ -38,3 +38,49 @@ LOCAL_CXX_STL := none
 LOCAL_NO_LIBGCC := true
 LOCAL_WHOLE_STATIC_LIBRARIES := libcompiler_rt
 include $(BUILD_EXECUTABLE)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := aeabi_cfcmpeq_test
+LOCAL_CFLAGS_arm += -D__ARM_EABI -mfloat-abi=softfp
+LOCAL_SRC_FILES_arm := arm/aeabi_cfcmpeq_test.c arm/call_apsr.S
+LOCAL_STRIP_MODULE := false
+LOCAL_CLANG := true
+LOCAL_MODULE_TARGET_ARCH := arm
+LOCAL_CXX_STL := none
+LOCAL_NO_LIBGCC := true
+LOCAL_WHOLE_STATIC_LIBRARIES := libcompiler_rt
+include $(BUILD_EXECUTABLE)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := aeabi_cdcmpeq_test
+LOCAL_CFLAGS_arm += -D__ARM_EABI
+LOCAL_SRC_FILES_arm := arm/aeabi_cdcmpeq_test.c arm/call_apsr.S
+LOCAL_CLANG := true
+LOCAL_MODULE_TARGET_ARCH := arm
+LOCAL_CXX_STL := none
+LOCAL_NO_LIBGCC := true
+LOCAL_WHOLE_STATIC_LIBRARIES := libcompiler_rt
+include $(BUILD_EXECUTABLE)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := aeabi_cfcmple_test
+LOCAL_CFLAGS_arm += -D__ARM_EABI
+LOCAL_SRC_FILES_arm := arm/aeabi_cfcmple_test.c arm/call_apsr.S
+LOCAL_CLANG := true
+LOCAL_MODULE_TARGET_ARCH := arm
+LOCAL_CXX_STL := none
+LOCAL_NO_LIBGCC := true
+LOCAL_WHOLE_STATIC_LIBRARIES := libcompiler_rt
+include $(BUILD_EXECUTABLE)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := aeabi_cdcmple_test
+LOCAL_CFLAGS_arm += -D__ARM_EABI
+LOCAL_SRC_FILES_arm := arm/aeabi_cdcmple_test.c arm/call_apsr.S
+LOCAL_CLANG := true
+LOCAL_MODULE_TARGET_ARCH := arm
+LOCAL_CXX_STL := none
+LOCAL_NO_LIBGCC := true
+LOCAL_WHOLE_STATIC_LIBRARIES := libcompiler_rt
+include $(BUILD_EXECUTABLE)
+
