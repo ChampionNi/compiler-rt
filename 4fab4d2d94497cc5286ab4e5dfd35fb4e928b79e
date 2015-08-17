@@ -19,6 +19,47 @@
     },
     {
       "key": {
+        "uuid": "e4aeed64_f0828d0c",
+        "filename": "lib/builtins/arm/missing_arm.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2015-08-17T23:03:58Z",
+      "side": 1,
+      "message": "These should all be fixed by:\nhttp://reviews.llvm.org/D12088\nhttp://reviews.llvm.org/D12089",
+      "parentUuid": "e7aeef64_46309271",
+      "revId": "4fab4d2d94497cc5286ab4e5dfd35fb4e928b79e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4434d7f_4feef280",
+        "filename": "lib/builtins/missing.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2015-08-17T23:03:58Z",
+      "side": 1,
+      "message": "http://reviews.llvm.org/D12091",
+      "range": {
+        "startLine": 1,
+        "startChar": 5,
+        "endLine": 1,
+        "endChar": 13
+      },
+      "revId": "4fab4d2d94497cc5286ab4e5dfd35fb4e928b79e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c7a9eb5f_283be3f5",
         "filename": "lib/builtins/missing.c",
         "patchSetId": 1
@@ -30,6 +71,24 @@
       "writtenOn": "2015-08-07T23:12:04Z",
       "side": 1,
       "message": "Yeah, we need to move this out of the ppc-only section or understand why bionic needs this.",
+      "revId": "4fab4d2d94497cc5286ab4e5dfd35fb4e928b79e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4aeed64_23253de3",
+        "filename": "lib/builtins/missing.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1079148
+      },
+      "writtenOn": "2015-08-17T23:03:58Z",
+      "side": 1,
+      "message": "Looks like these two are both exported by libgcc on everything, so we should move it out of ppc-only.",
+      "parentUuid": "c7a9eb5f_283be3f5",
       "revId": "4fab4d2d94497cc5286ab4e5dfd35fb4e928b79e",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
