@@ -87,6 +87,11 @@ tsan_rtl_files := \
   ../sanitizer_common/sanitizer_tls_get_addr.cc \
   ../sanitizer_common/sanitizer_unwind_posix_libcdep.cc \
   ../sanitizer_common/sanitizer_win.cc \
+  ../ubsan/ubsan_diag.cc \
+  ../ubsan/ubsan_init.cc \
+  ../ubsan/ubsan_flags.cc \
+  ../ubsan/ubsan_handlers.cc \
+  ../ubsan/ubsan_value.cc \
 
 tsan_rtl_cppflags := -std=c++11 -Wall -Werror -Wno-unused-parameter -Wno-non-virtual-dtor \
                      -fno-rtti -fno-builtin
@@ -106,6 +111,17 @@ LOCAL_MULTILIB := 64
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 include $(BUILD_HOST_STATIC_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libtsan_cxx
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES = $(tsan_rtl_c_includes)
+LOCAL_CPPFLAGS := $(tsan_rtl_cppflags)
+LOCAL_SRC_FILES := rtl/tsan_new_delete.cc
+LOCAL_CXX_STL := none
+LOCAL_SANITIZE := never
+LOCAL_MULTILIB := 64
+LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
+include $(BUILD_HOST_STATIC_LIBRARY)
 
 tsan_unit_test_src_files := \
   tests/unit/tsan_clock_test.cc \
