@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4485f957_30e181bb",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-24T23:05:21Z",
+      "side": 1,
+      "message": "Looking at the CMakeLists.txt, I think LOCAL_WHOLE_STATIC_LIBRARIES :\u003d libubsan would be more appropriate (probably should be using libsan for all the sanitizer_common stuff as well).",
+      "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4750d3f_9af40afb",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-24T23:05:21Z",
+      "side": 1,
+      "message": "Redundant.",
+      "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
