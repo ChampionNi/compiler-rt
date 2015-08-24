@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "a47f9520_a26f5f1e",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-24T23:08:28Z",
+      "side": 1,
+      "message": "Yes, it does work. LOCAL_STATIC_LIBRARIES does not, LOCAL_WHOLE_STATIC_LIBRARIES does (and behaves as expected).",
+      "parentUuid": "c42ba915_0df8dc88",
+      "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e4750d3f_9af40afb",
         "filename": "lib/tsan/Android.mk",
         "patchSetId": 1
