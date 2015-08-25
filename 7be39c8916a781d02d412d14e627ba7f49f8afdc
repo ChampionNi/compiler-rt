@@ -105,6 +105,24 @@
       "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "048f817d_476c89a9",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-08-25T00:40:09Z",
+      "side": 1,
+      "message": "This line in particular is done automatically by the build system (technically the file that did the include $(BUILD_...)). It\u0027s still needed for more complicated makefile layouts, (like Android.build.mk that can be found in libunwind and bionic/tests), but not here.",
+      "parentUuid": "e4750d3f_3c69536f",
+      "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
