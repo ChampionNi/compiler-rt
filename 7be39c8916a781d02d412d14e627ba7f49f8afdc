@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "048f817d_278aa5f8",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1056364
+      },
+      "writtenOn": "2015-08-25T00:33:33Z",
+      "side": 1,
+      "message": "I think your suggestion is better.",
+      "parentUuid": "a47f9520_a26f5f1e",
+      "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e4750d3f_9af40afb",
         "filename": "lib/tsan/Android.mk",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "writtenOn": "2015-08-24T23:05:21Z",
       "side": 1,
       "message": "Redundant.",
+      "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4750d3f_3c69536f",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1056364
+      },
+      "writtenOn": "2015-08-25T00:33:33Z",
+      "side": 1,
+      "message": "LOCAL_ADDITIONAL_DEPENDENCIES? shouldn\u0027t it be added to each build target?",
+      "parentUuid": "e4750d3f_9af40afb",
       "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
