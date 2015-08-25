@@ -123,6 +123,24 @@
       "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a42a3512_867a8c92",
+        "filename": "lib/tsan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1056364
+      },
+      "writtenOn": "2015-08-25T00:52:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "048f817d_476c89a9",
+      "revId": "7be39c8916a781d02d412d14e627ba7f49f8afdc",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
