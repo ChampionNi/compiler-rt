@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c453aafb_d9542740",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-09-16T23:16:26Z",
+      "side": 1,
+      "message": "Is there really no programmatic way to do this?",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e44c2e60_053722c6",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-09-16T23:16:26Z",
+      "side": 1,
+      "message": "Is this needed here with the not_windows above?",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "843d32a1_6b26f695",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-09-16T23:16:26Z",
+      "side": 1,
+      "message": "Um, this means that the rest of compiler-rt isn\u0027t getting built.",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
