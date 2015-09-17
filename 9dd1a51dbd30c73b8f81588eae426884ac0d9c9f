@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "a9692fe6_57e6ecec",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-09-17T00:59:57Z",
+      "side": 1,
+      "message": "I talked with Colin about this, and he explained this part of bp well. I think it is ok to be explicit about this right now. I was just referring to the existing Android.mk rules that look at things like \"umodsi3\" to remove the .c version when a .S version is present.",
+      "parentUuid": "49a1935d_9c12658e",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e44c2e60_053722c6",
         "filename": "Android.bp",
         "patchSetId": 1
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "697bb7ad_1554f43d",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-09-17T00:59:57Z",
+      "side": 1,
+      "message": "Ah, I should have realized that.",
+      "parentUuid": "c9666312_58e61ded",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "843d32a1_6b26f695",
         "filename": "Android.bp",
         "patchSetId": 1
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "My intent right now isn\u0027t to fully translate these makefiles, but to get a base build that we can start iterating on with soong. We only needed libcompiler_rt-extras for that, but we already had translations for the other libraries in this file.",
       "parentUuid": "843d32a1_6b26f695",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9666312_f81ff165",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-09-17T00:59:57Z",
+      "side": 1,
+      "message": "Right. Colin explained that to me as well. This is fine with me. I just wanted to make sure that there was a plan to tackle the rest of the subtree as well.",
+      "parentUuid": "a9692fe6_b792e844",
       "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
