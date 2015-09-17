@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "49a1935d_9c12658e",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 253,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2015-09-17T00:55:45Z",
+      "side": 1,
+      "message": "How would you do it? The file basenames don\u0027t match (and even if they did, that\u0027s not a guarantee across the whole codebase)",
+      "parentUuid": "c453aafb_d9542740",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e44c2e60_053722c6",
         "filename": "Android.bp",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "c9666312_58e61ded",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 334,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2015-09-17T00:55:45Z",
+      "side": 1,
+      "message": "not_windows only applies to host builds",
+      "parentUuid": "e44c2e60_053722c6",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "843d32a1_6b26f695",
         "filename": "Android.bp",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-09-16T23:16:26Z",
       "side": 1,
       "message": "Um, this means that the rest of compiler-rt isn\u0027t getting built.",
+      "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9692fe6_b792e844",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2015-09-17T00:55:45Z",
+      "side": 1,
+      "message": "My intent right now isn\u0027t to fully translate these makefiles, but to get a base build that we can start iterating on with soong. We only needed libcompiler_rt-extras for that, but we already had translations for the other libraries in this file.",
+      "parentUuid": "843d32a1_6b26f695",
       "revId": "9dd1a51dbd30c73b8f81588eae426884ac0d9c9f",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
