@@ -125,7 +125,7 @@ asan_test_cflags := \
 	-std=c++11
 
 
-ifeq ($(TARGET_ARCH),arm)
+ifneq (,$(filter arm arm64,$(TARGET_ARCH)))
 
 include $(CLEAR_VARS)
 
@@ -252,7 +252,7 @@ include $(BUILD_EXECUTABLE)
 
 endif # SKIP_LLVM_TESTS
 
-endif # ifeq($(TARGET_ARCH),arm)
+endif # ifneq (,$(filter arm arm64,$(TARGET_ARCH)))
 
 ################################################################################
 # Host modules

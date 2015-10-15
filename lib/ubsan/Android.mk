@@ -45,7 +45,7 @@ ubsan_rtl_c_includes := \
 ################################################################################
 # Target modules
 
-ifeq ($(TARGET_ARCH),arm)
+ifneq (,$(filter arm arm64,$(TARGET_ARCH)))
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libubsan
@@ -58,7 +58,7 @@ LOCAL_SANITIZE := never
 LOCAL_MULTILIB := both
 include $(BUILD_STATIC_LIBRARY)
 
-endif # ($(TARGET_ARCH),arm)
+endif # ifneq (,$(filter arm arm64,$(TARGET_ARCH)))
 
 ################################################################################
 # Host modules
