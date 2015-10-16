@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9943ea80_8dc76d9e",
+        "filename": "lib/sanitizer_common/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-16T03:42:25Z",
+      "side": 1,
+      "message": "Should be able to clean up a lot of the asan makefile now that this is here. Aren\u0027t you getting duplicated of this right now since libsan -\u003e libubsan -\u003e libasan?",
+      "revId": "930d9f0d0885dbb56fb2486d69735cf46ec6a806",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9550e3b_6bf76940",
+        "filename": "lib/ubsan/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-16T03:42:25Z",
+      "side": 1,
+      "message": "LOCAL_RTTI_FLAG :\u003d -fno-rtti\n\n(this is the default, fyi)",
+      "range": {
+        "startLine": 65,
+        "startChar": 40,
+        "endLine": 65,
+        "endChar": 49
+      },
+      "revId": "930d9f0d0885dbb56fb2486d69735cf46ec6a806",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39611e20_7c3a8d62",
+        "filename": "lib/ubsan/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-16T03:42:25Z",
+      "side": 1,
+      "message": "LOCAL_RTTI_FLAG :\u003d -frtti",
+      "range": {
+        "startLine": 77,
+        "startChar": 40,
+        "endLine": 77,
+        "endChar": 46
+      },
+      "revId": "930d9f0d0885dbb56fb2486d69735cf46ec6a806",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
