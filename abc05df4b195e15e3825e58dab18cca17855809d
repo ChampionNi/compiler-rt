@@ -33,6 +33,24 @@
       "revId": "abc05df4b195e15e3825e58dab18cca17855809d",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f91146d4_3dbf47e7",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2015-10-16T23:38:58Z",
+      "side": 1,
+      "message": "Yes, we only need this to avoid linking the stuff that depends on libstdc++/libc++ into C programs.",
+      "parentUuid": "9943ea80_8d0c8dc4",
+      "revId": "abc05df4b195e15e3825e58dab18cca17855809d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
