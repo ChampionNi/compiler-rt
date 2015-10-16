@@ -129,16 +129,37 @@ ifneq (,$(filter arm arm64,$(TARGET_ARCH)))
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := libasan
+LOCAL_MODULE := libasan-preinit
 LOCAL_C_INCLUDES := \
     external/compiler-rt/lib \
     external/compiler-rt/include
 LOCAL_CFLAGS += $(asan_rtl_cflags)
 LOCAL_SRC_FILES := asan_preinit.cc
-#LOCAL_SRC_FILES := asan_android_stub.cc asan_preinit.cc
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
+LOCAL_SANITIZE := never
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libasan
+LOCAL_C_INCLUDES := external/compiler-rt/lib external/compiler-rt/include
+LOCAL_CFLAGS += $(asan_rtl_cflags)
+LOCAL_SRC_FILES := $(asan_rtl_files)
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_CLANG := true
+LOCAL_MULTILIB := both
+LOCAL_SANITIZE := never
+LOCAL_WHOLE_STATIC_LIBRARIES := libubsan
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libasan_cxx
+LOCAL_C_INCLUDES := external/compiler-rt/lib external/compiler-rt/include
+LOCAL_CFLAGS += $(asan_rtl_cflags)
+LOCAL_SRC_FILES := $(asan_rtl_cxx_files)
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_CLANG := true
+LOCAL_MULTILIB := both
 LOCAL_SANITIZE := never
 include $(BUILD_STATIC_LIBRARY)
 
@@ -173,7 +194,6 @@ endif
 LOCAL_CLANG := true
 LOCAL_SANITIZE := never
 LOCAL_CXX_STL := none
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 include $(BUILD_SHARED_LIBRARY)
 
 endef
@@ -193,7 +213,6 @@ LOCAL_CPP_EXTENSION := .cc
 LOCAL_CPPFLAGS := -std=c++11
 LOCAL_SHARED_LIBRARIES += libc
 LOCAL_SANITIZE := never
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_CXX_STL := libc++
 
 include $(BUILD_EXECUTABLE)
@@ -223,7 +242,6 @@ LOCAL_SRC_FILES := tests/asan_noinst_test.cc tests/asan_test_main.cc
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
 LOCAL_SANITIZE := never
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_CXX_STL := libc++
 
 include $(BUILD_STATIC_LIBRARY)
@@ -245,7 +263,6 @@ LOCAL_STATIC_LIBRARIES := libgtest libasan_noinst_test
 LOCAL_SHARED_LIBRARIES := libc
 LOCAL_SANITIZE := address
 LOCAL_CLANG := true
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_CXX_STL := libc++
 
 include $(BUILD_EXECUTABLE)
@@ -266,7 +283,6 @@ LOCAL_SRC_FILES := $(asan_rtl_files)
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
 LOCAL_MULTILIB := both
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_SANITIZE := never
 LOCAL_WHOLE_STATIC_LIBRARIES := libubsan
 include $(BUILD_HOST_STATIC_LIBRARY)
@@ -279,7 +295,6 @@ LOCAL_SRC_FILES := $(asan_rtl_cxx_files)
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
 LOCAL_MULTILIB := both
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_SANITIZE := never
 include $(BUILD_HOST_STATIC_LIBRARY)
 
@@ -307,7 +322,6 @@ LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
 LOCAL_CXX_STL := libc++
 LOCAL_MULTILIB := both
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_SANITIZE := never
 include $(BUILD_HOST_STATIC_LIBRARY)
 
@@ -329,7 +343,6 @@ LOCAL_MULTILIB := both
 LOCAL_LDLIBS := -lrt
 LOCAL_MODULE_STEM_32 := $(LOCAL_MODULE)32
 LOCAL_MODULE_STEM_64 := $(LOCAL_MODULE)64
-LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 include $(BUILD_HOST_NATIVE_TEST)
 endif # SKIP_LLVM_TESTS
 endif
