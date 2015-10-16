@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "996cca16_05f17cbf",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2015-10-16T03:44:53Z",
+      "side": 1,
+      "message": "Is this what LOCAL_MODULE_TARGET_ARCH is for?",
+      "revId": "ebd8bf7fff5d141888bb5acd72047f5f3fe1d63d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
