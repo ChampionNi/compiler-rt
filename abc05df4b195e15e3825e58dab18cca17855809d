@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79c3965a_7511e8d5",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-16T02:57:47Z",
+      "side": 1,
+      "message": "The following 2 sections are just the same as the HOST variant, so I am not sure if it needs extra work (as in the SHARED case below).",
+      "revId": "abc05df4b195e15e3825e58dab18cca17855809d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9943ea80_8d0c8dc4",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-16T02:57:47Z",
+      "side": 1,
+      "message": "I didn\u0027t realize that libasan_cxx literally only contains 1 file (and is just supplemental to libasan itself). CMakelists.txt confirms that this is the intended behavior here.",
+      "revId": "abc05df4b195e15e3825e58dab18cca17855809d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
