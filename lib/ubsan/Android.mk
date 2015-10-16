@@ -58,6 +58,38 @@ LOCAL_SANITIZE := never
 LOCAL_MULTILIB := both
 include $(BUILD_STATIC_LIBRARY)
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := libubsan_standalone
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(ubsan_rtl_c_includes)
+LOCAL_CPPFLAGS := $(ubsan_rtl_cppflags) -fno-rtti
+LOCAL_SRC_FILES := $(ubsan_rtl_files)
+LOCAL_WHOLE_STATIC_LIBRARIES := libsan
+LOCAL_CXX_STL := none
+LOCAL_SANITIZE := never
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libubsan_cxx
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(ubsan_rtl_c_includes)
+LOCAL_CPPFLAGS := $(ubsan_rtl_cppflags) -frtti
+LOCAL_SRC_FILES := $(ubsan_cxx_rtl_files)
+LOCAL_SANITIZE := never
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libubsan_standalone_cxx
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(ubsan_rtl_c_includes)
+LOCAL_CPPFLAGS := $(ubsan_rtl_cppflags) -frtti
+LOCAL_SRC_FILES := $(ubsan_cxx_rtl_files)
+LOCAL_SANITIZE := never
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
+
 endif # ifneq (,$(filter arm arm64,$(TARGET_ARCH)))
 
 ################################################################################

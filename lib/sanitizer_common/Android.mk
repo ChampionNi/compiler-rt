@@ -67,10 +67,22 @@ san_rtl_cppflags := \
     -std=c++11 \
     -Wall \
     -Werror \
+    -Wno-non-virtual-dtor \
     -Wno-unused-parameter \
 
 san_rtl_c_includes := \
     external/compiler-rt/lib \
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libsan
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(san_rtl_c_includes)
+LOCAL_CPPFLAGS := $(san_rtl_cppflags)
+LOCAL_SRC_FILES := $(san_rtl_files) $(san_cdep_files)
+LOCAL_CXX_STL := none
+LOCAL_SANITIZE := never
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
 
 ################################################################################
 # Host modules
