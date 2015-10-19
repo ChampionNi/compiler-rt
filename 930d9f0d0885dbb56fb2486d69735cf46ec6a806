@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "79d47637_a2cb04aa",
+        "filename": "lib/sanitizer_common/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-19T21:56:15Z",
+      "side": 1,
+      "message": "I don\u0027t think so. This was for static linking, which I think is now a bad idea. I am going to fix this patch to do the right thing with the dynamic libraries instead.",
+      "parentUuid": "9943ea80_8dc76d9e",
+      "revId": "930d9f0d0885dbb56fb2486d69735cf46ec6a806",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b9550e3b_6bf76940",
         "filename": "lib/ubsan/Android.mk",
         "patchSetId": 2
