@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "39de7e5b_2035d09a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-10-20T02:43:54Z",
+      "side": 1,
+      "message": "Currently, darwin-x86 doesn\u0027t get the rest of the profile_rt libraries, nor does it seem all that supported for ASan builds. I am tempted to leave this as a Linux-only feature.",
+      "range": {
+        "startLine": 12,
+        "startChar": 36,
+        "endLine": 12,
+        "endChar": 46
+      },
+      "revId": "fef7bc75c159a706969f5b3290b77e75085f05d7",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
