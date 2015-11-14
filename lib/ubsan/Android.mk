@@ -43,8 +43,6 @@ ubsan_rtl_c_includes := \
 ################################################################################
 # Target modules
 
-ifeq ($(TARGET_ARCH),arm)
-
 include $(CLEAR_VARS)
 LOCAL_MODULE := libubsan
 LOCAL_CPP_EXTENSION := .cc
@@ -56,7 +54,16 @@ LOCAL_SANITIZE := never
 LOCAL_MULTILIB := both
 include $(BUILD_STATIC_LIBRARY)
 
-endif # ($(TARGET_ARCH),arm)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libubsan_cxx
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(ubsan_rtl_c_includes)
+LOCAL_CPPFLAGS := $(ubsan_rtl_cppflags)
+LOCAL_RTTI_FLAG := -frtti
+LOCAL_SRC_FILES := $(ubsan_cxx_rtl_files)
+LOCAL_SANITIZE := never
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
 
 ################################################################################
 # Host modules

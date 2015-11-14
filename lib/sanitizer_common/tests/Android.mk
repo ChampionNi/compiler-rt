@@ -56,6 +56,17 @@ san_test_cppflags := \
 san_test_c_includes := \
     external/compiler-rt/lib \
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := san_test
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(san_test_c_includes)
+LOCAL_CPPFLAGS := $(san_test_cppflags)
+LOCAL_SRC_FILES := $(san_test_files)
+LOCAL_STATIC_LIBRARIES := libsan
+LOCAL_SHARED_LIBRARIES := liblog libdl
+LOCAL_SANITIZE := never
+include $(BUILD_NATIVE_TEST)
+
 ifneq ($(HOST_OS),darwin)
 
 include $(CLEAR_VARS)
