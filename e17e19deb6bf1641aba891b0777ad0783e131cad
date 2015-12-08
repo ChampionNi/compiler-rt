@@ -1,0 +1,8 @@
+Code-Review+2: Chih-hung Hsieh <chh@google.com>
+Code-Review+2: Dan Albert <danalbert@google.com>
+Verified+1: Stephen Hines <srhines@google.com>
+Submitted-by: Stephen Hines <srhines@google.com>
+Submitted-at: Tue, 08 Dec 2015 22:16:01 +0000
+Reviewed-on: https://android-review.googlesource.com/185734
+Project: platform/external/compiler-rt
+Branch: refs/heads/dev
