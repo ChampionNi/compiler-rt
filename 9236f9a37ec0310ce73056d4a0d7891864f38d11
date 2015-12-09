@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "253496db_b2b998ed",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-12-09T21:55:01Z",
+      "side": 1,
+      "message": "Should we define a top-level SAN_TARGET_ARCH variable in llvm-device-build.mk? That might be less error prone. Of course, we can change this in a follow-up CL.",
+      "revId": "9236f9a37ec0310ce73056d4a0d7891864f38d11",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
