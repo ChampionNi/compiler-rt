@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "454eea83_19ce5b36",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2015-12-10T19:02:55Z",
+      "side": 0,
+      "message": "I realize that some of these are silly (lol at my terrible libc dependencies in the past), but are these other deps really unnecessary?",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 164,
+        "endChar": 56
+      },
+      "revId": "328b5e5ae042873ad613bdee0785b97e69a14cad",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
