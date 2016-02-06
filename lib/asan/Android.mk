@@ -135,7 +135,7 @@ LOCAL_SRC_FILES := asan_preinit.cc
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
 LOCAL_SANITIZE := never
-LOCAL_MODULE_TARGET_ARCH := arm arm64 x86
+LOCAL_MODULE_TARGET_ARCH := arm arm64 x86 mips mips64
 LOCAL_NDK_STL_VARIANT := none
 LOCAL_SDK_VERSION := 19
 include $(BUILD_STATIC_LIBRARY)
@@ -168,7 +168,7 @@ ifneq ($(HOST_OS),darwin)
 endif
 LOCAL_CLANG := true
 LOCAL_SANITIZE := never
-LOCAL_MODULE_TARGET_ARCH := arm arm64 x86
+LOCAL_MODULE_TARGET_ARCH := arm arm64 x86 mips mips64
 LOCAL_NDK_STL_VARIANT := none
 LOCAL_SDK_VERSION := 19
 include $(BUILD_SHARED_LIBRARY)
@@ -191,7 +191,7 @@ LOCAL_SRC_FILES := asanwrapper.cc
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CPPFLAGS := -std=c++11
 LOCAL_SANITIZE := never
-LOCAL_MODULE_TARGET_ARCH := arm arm64 x86
+LOCAL_MODULE_TARGET_ARCH := arm arm64 x86 mips mips64
 LOCAL_CXX_STL := libc++
 
 include $(BUILD_EXECUTABLE)
@@ -221,7 +221,7 @@ LOCAL_SRC_FILES := tests/asan_noinst_test.cc tests/asan_test_main.cc
 LOCAL_CPP_EXTENSION := .cc
 LOCAL_CLANG := true
 LOCAL_SANITIZE := never
-LOCAL_MODULE_TARGET_ARCH := arm arm64 x86
+LOCAL_MODULE_TARGET_ARCH := arm arm64 x86 mips mips64
 LOCAL_CXX_STL := libc++
 
 include $(BUILD_STATIC_LIBRARY)
@@ -243,7 +243,7 @@ LOCAL_STATIC_LIBRARIES := libgtest libasan_noinst_test
 LOCAL_SHARED_LIBRARIES := libc
 LOCAL_SANITIZE := address
 LOCAL_CLANG := true
-LOCAL_MODULE_TARGET_ARCH := arm arm64 x86
+LOCAL_MODULE_TARGET_ARCH := arm arm64 x86 mips mips64
 LOCAL_CXX_STL := libc++
 
 include $(BUILD_EXECUTABLE)
