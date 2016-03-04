@@ -16,6 +16,24 @@
       "revId": "b09bd8b703471410af7a8d32a7b251301b451ada",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b7e8c566_c2c90274",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2016-03-04T23:38:04Z",
+      "side": 1,
+      "message": "This is copied directly from line 492 below, which was configured in https://android-review.googlesource.com/110756",
+      "parentUuid": "e211990a_2e804d1f",
+      "revId": "b09bd8b703471410af7a8d32a7b251301b451ada",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
