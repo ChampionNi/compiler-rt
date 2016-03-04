@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e211990a_2e804d1f",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 419,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-03-04T23:31:27Z",
+      "side": 1,
+      "message": "Are you missing a darwin variant here?",
+      "revId": "b09bd8b703471410af7a8d32a7b251301b451ada",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
