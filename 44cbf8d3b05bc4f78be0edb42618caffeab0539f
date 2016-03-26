@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d1cc697f_c87ea33c",
+        "filename": "Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 395,
+      "author": {
+        "id": 1002751
+      },
+      "writtenOn": "2016-03-26T00:02:08Z",
+      "side": 1,
+      "message": "This matches the makefiles, but is a little weird since this is not enabled for windows.",
+      "revId": "44cbf8d3b05bc4f78be0edb42618caffeab0539f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
