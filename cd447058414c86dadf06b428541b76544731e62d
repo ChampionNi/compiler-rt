@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "51031991_e00e9e19",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2016-03-29T20:32:58Z",
+      "side": 1,
+      "message": "Thanks, was going to suggest that.",
+      "range": {
+        "startLine": 14,
+        "startChar": 8,
+        "endLine": 17,
+        "endChar": 11
+      },
+      "revId": "cd447058414c86dadf06b428541b76544731e62d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
