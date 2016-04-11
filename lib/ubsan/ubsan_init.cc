@@ -32,6 +32,8 @@ static StaticSpinMutex ubsan_init_mu;
 
 static void CommonInit() {
   InitializeSuppressions();
+  AndroidLogInit();
+  SetPrintfAndReportCallback(UBSanAppendToErrorMessageBuffer);
 }
 
 static void CommonStandaloneInit() {
