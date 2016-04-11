@@ -26,6 +26,28 @@
 
 using namespace __ubsan;
 
+static BlockingMutex error_message_buf_mutex(LINKER_INITIALIZED);
+static char *ubsan_error_message_buffer = nullptr;
+static uptr ubsan_error_message_buffer_pos = 0;
+
+// Taken from ASAN, only buffer is reallocated instead of truncated :)
+void __ubsan::UBSanAppendToErrorMessageBuffer(const char *buffer) {
+  BlockingMutexLock l(&error_message_buf_mutex);
+  if (!ubsan_error_message_buffer) {
+    ubsan_error_message_buffer =
+      (char*)MmapOrDieQuietly(kErrorMessageBufferSize, __func__);
+    ubsan_error_message_buffer_pos = 0;
+  }
+  uptr length = internal_strlen(buffer);
+  RAW_CHECK(kErrorMessageBufferSize >= ubsan_error_message_buffer_pos);
+  uptr remaining = kErrorMessageBufferSize - ubsan_error_message_buffer_pos;
+  internal_strncpy(ubsan_error_message_buffer + ubsan_error_message_buffer_pos,
+                   buffer, remaining);
+  ubsan_error_message_buffer[kErrorMessageBufferSize - 1] = '\0';
+  // FIXME: reallocate the buffer instead of truncating the message.
+  ubsan_error_message_buffer_pos += Min(remaining, length);
+}
+
 static void MaybePrintStackTrace(uptr pc, uptr bp) {
   // We assume that flags are already parsed, as UBSan runtime
   // will definitely be called when we print the first diagnostics message.
@@ -338,6 +360,7 @@ static void renderMemorySnippet(const Decorator &Decor, MemoryLocation Loc,
 }
 
 Diag::~Diag() {
+  Printf("*** In ~Diag\n");
   // All diagnostics should be printed under report mutex.
   CommonSanitizerReportMutex.CheckLocked();
   Decorator Decor;
@@ -363,6 +386,17 @@ Diag::~Diag() {
   if (Loc.isMemoryLocation())
     renderMemorySnippet(Decor, Loc.getMemoryLocation(), Ranges,
                         NumRanges, Args);
+  // At this point, everything should be copied to the internal buffer.
+  InternalScopedBuffer<char> buffer_copy(kErrorMessageBufferSize);
+  {
+    BlockingMutexLock l(&error_message_buf_mutex);
+    internal_memcpy(buffer_copy.data(), ubsan_error_message_buffer, kErrorMessageBufferSize);
+  }
+  RemoveANSIEscapeSequencesFromString(buffer_copy.data());
+  Printf("*** about to do LogFullErrorReport ");
+  Printf("*** doing LogFullErrorReport");
+  LogFullErrorReport(buffer_copy.data());
+  Printf("*** Finished ~Diag\n");
 }
 
 ScopedReport::ScopedReport(ReportOptions Opts, Location SummaryLoc,

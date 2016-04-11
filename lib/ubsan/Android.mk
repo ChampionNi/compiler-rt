@@ -31,7 +31,6 @@ ubsan_cxx_rtl_files := \
     ubsan_type_hash_win.cc \
 
 ubsan_rtl_cppflags := \
-    -fvisibility=hidden \
     -fno-exceptions \
     -std=c++11 \
     -Wall \
@@ -51,10 +50,22 @@ LOCAL_CPP_EXTENSION := .cc
 LOCAL_C_INCLUDES := $(ubsan_rtl_c_includes)
 LOCAL_CPPFLAGS := $(ubsan_rtl_cppflags)
 LOCAL_SRC_FILES := $(ubsan_rtl_files)
-LOCAL_NDK_STL_VARIANT := none
-LOCAL_SDK_VERSION := 19
+LOCAL_CXX_STL := libc++
 LOCAL_SANITIZE := never
-LOCAL_MODULE_TARGET_ARCH := arm arm64 x86
+LOCAL_WHOLE_STATIC_LIBRARIES := libsan
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libubsan_cxx
+LOCAL_CPP_EXTENSION := .cc
+LOCAL_C_INCLUDES := $(ubsan_rtl_c_includes)
+LOCAL_CPPFLAGS := $(ubsan_rtl_cppflags)
+LOCAL_RTTI_FLAG := -frtti
+LOCAL_SRC_FILES := $(ubsan_rtl_files)
+LOCAL_SRC_FILES += $(ubsan_cxx_rtl_files)
+LOCAL_SANITIZE := never
+LOCAL_WHOLE_STATIC_LIBRARIES := libsan
 LOCAL_MULTILIB := both
 include $(BUILD_STATIC_LIBRARY)
 
