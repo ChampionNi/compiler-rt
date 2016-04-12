@@ -17,6 +17,7 @@
 #include "sanitizer_common/sanitizer_stacktrace.h"
 #include "sanitizer_common/sanitizer_symbolizer.h"
 
+
 namespace __ubsan {
 
 class SymbolizedStackHolder {
@@ -245,6 +246,7 @@ public:
 };
 
 void InitializeSuppressions();
+void UBSanAppendToErrorMessageBuffer(const char *buffer);
 bool IsVptrCheckSuppressed(const char *TypeName);
 // Sometimes UBSan runtime can know filename from handlers arguments, even if
 // debug info is missing.
