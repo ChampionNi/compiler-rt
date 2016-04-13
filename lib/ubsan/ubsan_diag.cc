@@ -193,6 +193,7 @@ static void renderLocation(Location Loc) {
     break;
   }
   Printf("%s:", LocBuffer.data());
+
 }
 
 static void renderText(const char *Message, const Diag::Arg *Args) {
@@ -360,7 +361,6 @@ static void renderMemorySnippet(const Decorator &Decor, MemoryLocation Loc,
 }
 
 Diag::~Diag() {
-  Printf("*** In ~Diag\n");
   // All diagnostics should be printed under report mutex.
   CommonSanitizerReportMutex.CheckLocked();
   Decorator Decor;
@@ -393,10 +393,8 @@ Diag::~Diag() {
     internal_memcpy(buffer_copy.data(), ubsan_error_message_buffer, kErrorMessageBufferSize);
   }
   RemoveANSIEscapeSequencesFromString(buffer_copy.data());
-  Printf("*** about to do LogFullErrorReport ");
-  Printf("*** doing LogFullErrorReport");
-  LogFullErrorReport(buffer_copy.data());
-  Printf("*** Finished ~Diag\n");
+  WriteToSyslog(buffer_copy.data());
+  //LogFullErrorReport(buffer_copy.data());
 }
 
 ScopedReport::ScopedReport(ReportOptions Opts, Location SummaryLoc,

@@ -32,13 +32,13 @@ static StaticSpinMutex ubsan_init_mu;
 
 static void CommonInit() {
   InitializeSuppressions();
-  AndroidLogInit();
-  SetPrintfAndReportCallback(UBSanAppendToErrorMessageBuffer);
 }
 
 static void CommonStandaloneInit() {
   SanitizerToolName = "UndefinedBehaviorSanitizer";
   InitializeFlags();
+  AndroidLogInit();
+  SetPrintfAndReportCallback(UBSanAppendToErrorMessageBuffer);
   CacheBinaryName();
   __sanitizer_set_report_path(common_flags()->log_path);
   InitializeCoverage(common_flags()->coverage, common_flags()->coverage_dir);
