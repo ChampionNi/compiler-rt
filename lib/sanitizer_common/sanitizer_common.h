@@ -672,11 +672,10 @@ INLINE void WriteOneLineToSyslog(const char *s) {}
 #if SANITIZER_LINUX
 // Initialize Android logging. Any writes before this are silently lost.
 void AndroidLogInit();
-bool ShouldLogAfterPrintf();
 #else
 INLINE void AndroidLogInit() {}
-INLINE bool ShouldLogAfterPrintf() { return false; }
 #endif
+INLINE bool ShouldLogAfterPrintf() { return false; }
 
 #if SANITIZER_ANDROID
 void SanitizerInitializeUnwinder();
