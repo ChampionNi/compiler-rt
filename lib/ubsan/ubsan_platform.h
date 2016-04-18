@@ -20,6 +20,8 @@
 # define CAN_SANITIZE_UB 1
 #elif defined(_WIN32)
 # define CAN_SANITIZE_UB 1
+#elif defined(_ANDROID_)
+# define CAN_SANITIZE_UB 1
 #else
 # define CAN_SANITIZE_UB 0
 #endif
