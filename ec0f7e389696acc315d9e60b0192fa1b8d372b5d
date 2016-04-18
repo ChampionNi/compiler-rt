@@ -91,6 +91,24 @@
     },
     {
       "key": {
+        "uuid": "28ed58ca_6db3150e",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1080051
+      },
+      "writtenOn": "2016-04-18T22:39:27Z",
+      "side": 1,
+      "message": "The bugzilla site is public, but individual bugs are private until we make them public.  I\u0027ve fixed that.  I\u0027m told that the patch is now upstream too.  Thanks",
+      "parentUuid": "08fc147c_2cbf5324",
+      "revId": "ec0f7e389696acc315d9e60b0192fa1b8d372b5d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2868f801_351dd0ae",
         "filename": "lib/asan/Android.mk",
         "patchSetId": 2
