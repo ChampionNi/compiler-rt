@@ -26,6 +26,37 @@
 
 using namespace __ubsan;
 
+static BlockingMutex error_message_buf_mutex(LINKER_INITIALIZED);
+static char *ubsan_error_message_buffer = nullptr;
+static uptr ubsan_error_message_buffer_pos = 0;
+
+// Taken from ASAN, only buffer is reallocated instead of truncated :)
+void __ubsan::UBSanAppendToErrorMessageBuffer(const char *buffer) {
+  BlockingMutexLock l(&error_message_buf_mutex);
+  if (!ubsan_error_message_buffer) {
+    ubsan_error_message_buffer = 
+      (char*)MmapOrDieQuietly(kErrorMessageBufferSize, __func__);
+    ubsan_error_message_buffer_pos = 0;
+  }
+  uptr length = internal_strlen(buffer);
+  if (kErrorMessageBufferSize <= ubsan_error_message_buffer_pos) {
+    uptr new_length = (length + kErrorMessageBufferSize) * 2;
+    char *new_data = (char*)MmapOrDieQuietly(new_length, __func__);
+    internal_memcpy(new_data, ubsan_error_message_buffer, 
+		    ubsan_error_message_buffer_pos);
+    char *old_data = ubsan_error_message_buffer;
+    ubsan_error_message_buffer = new_data;    
+    UnmapOrDie(old_data, ubsan_error_message_buffer_pos);
+    kErrorMessageBufferSize += length;
+    kErrorMessageBufferSize *= 2;    
+  }
+  internal_strncpy(ubsan_error_message_buffer + ubsan_error_message_buffer_pos,
+		   buffer, length);
+  ubsan_error_message_buffer[kErrorMessageBufferSize - 1] = '\0';
+
+  ubsan_error_message_buffer_pos += length;
+}
+
 static void MaybePrintStackTrace(uptr pc, uptr bp) {
   // We assume that flags are already parsed, as UBSan runtime
   // will definitely be called when we print the first diagnostics message.
@@ -363,6 +394,16 @@ Diag::~Diag() {
   if (Loc.isMemoryLocation())
     renderMemorySnippet(Decor, Loc.getMemoryLocation(), Ranges,
                         NumRanges, Args);
+
+  //At this point, everything should be copied to the internal buffer
+  InternalScopedBuffer<char> buffer_copy(kErrorMessageBufferSize);
+  {
+    BlockingMutexLock l(&error_message_buf_mutex);
+    internal_memcpy(buffer_copy.data(), ubsan_error_message_buffer, 
+		    kErrorMessageBufferSize);
+  }
+  RemoveANSIEscapeSequencesFromString(buffer_copy.data());
+  WriteToSyslog(buffer_copy.data());
 }
 
 ScopedReport::ScopedReport(ReportOptions Opts, Location SummaryLoc,
