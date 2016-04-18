@@ -49,7 +49,7 @@ static const uptr kMaxNumberOfModules = 1 << 14;
 
 const uptr kMaxThreadStackSize = 1 << 30;  // 1Gb
 
-static const uptr kErrorMessageBufferSize = 1 << 16;
+static uptr kErrorMessageBufferSize = 1 << 16;
 
 // Denotes fake PC values that come from JIT/JAVA/etc.
 // For such PC values __tsan_symbolize_external() will be called.
@@ -672,11 +672,10 @@ INLINE void WriteOneLineToSyslog(const char *s) {}
 #if SANITIZER_LINUX
 // Initialize Android logging. Any writes before this are silently lost.
 void AndroidLogInit();
-bool ShouldLogAfterPrintf();
 #else
 INLINE void AndroidLogInit() {}
-INLINE bool ShouldLogAfterPrintf() { return false; }
 #endif
+INLINE bool ShouldLogAfterPrintf() { return false; }
 
 #if SANITIZER_ANDROID
 void SanitizerInitializeUnwinder();
