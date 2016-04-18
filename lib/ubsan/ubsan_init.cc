@@ -36,6 +36,8 @@ static void CommonInit() {
 
 static void CommonStandaloneInit() {
   SanitizerToolName = "UndefinedBehaviorSanitizer";
+  AndroidLogInit();
+  SetPrintfAndReportCallback(UBSanAppendToErrorMessageBuffer);
   InitializeFlags();
   CacheBinaryName();
   __sanitizer_set_report_path(common_flags()->log_path);
