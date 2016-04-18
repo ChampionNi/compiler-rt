@@ -245,6 +245,7 @@ public:
 };
 
 void InitializeSuppressions();
+void UBSanAppendToErrorMessagBuffer(const char *buffer);
 bool IsVptrCheckSuppressed(const char *TypeName);
 // Sometimes UBSan runtime can know filename from handlers arguments, even if
 // debug info is missing.
