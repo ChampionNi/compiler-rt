@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a801483f_b1fe0079",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-04-18T21:47:45Z",
+      "side": 1,
+      "message": "Is there a bug number for this in upstream?",
+      "revId": "ec0f7e389696acc315d9e60b0192fa1b8d372b5d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2868f801_351dd0ae",
+        "filename": "lib/asan/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-04-18T21:47:45Z",
+      "side": 1,
+      "message": "I assume this is the same bug, but it would be good to document it wherever we see the mysterious -O1.",
+      "revId": "ec0f7e389696acc315d9e60b0192fa1b8d372b5d",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
