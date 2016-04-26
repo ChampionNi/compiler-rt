@@ -72,7 +72,7 @@ include $(BUILD_HOST_NATIVE_TEST)
 include $(CLEAR_VARS)
 LOCAL_MODULE := san_test-Nolibc
 LOCAL_CPP_EXTENSION := .cc
-LOCAL_C_INCLUDES := $(san_test_c_includes) external/gtest/include
+LOCAL_C_INCLUDES := $(san_test_c_includes) external/googletest/include
 LOCAL_CPPFLAGS := $(san_test_cppflags)
 LOCAL_SRC_FILES := sanitizer_nolibc_test_main.cc
 LOCAL_STATIC_LIBRARIES := libsan libgtest_host
