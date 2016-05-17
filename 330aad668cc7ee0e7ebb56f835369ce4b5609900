@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b727eef3_ea19a768",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 415,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-05-17T22:12:58Z",
+      "side": 1,
+      "message": "Perhaps these should just be marked false for now, in order to let master build. Then we can make just this change to aosp/dev in order to build the prebuilts for mips (until I rebase internal to be able to build mips ASan as well).",
+      "revId": "330aad668cc7ee0e7ebb56f835369ce4b5609900",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b727eef3_4a1a7368",
+        "filename": "lib/interception/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-05-17T22:12:58Z",
+      "side": 1,
+      "message": "2016",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "330aad668cc7ee0e7ebb56f835369ce4b5609900",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b727eef3_8a0bcb1a",
+        "filename": "lib/tsan/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-05-17T22:12:58Z",
+      "side": 1,
+      "message": "2016",
+      "range": {
+        "startLine": 2,
+        "startChar": 17,
+        "endLine": 2,
+        "endChar": 21
+      },
+      "revId": "330aad668cc7ee0e7ebb56f835369ce4b5609900",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
