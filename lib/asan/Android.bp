@@ -56,7 +56,6 @@ asan_rtl_cflags = [
     "-Wno-sign-compare",
     "-Wno-unused-parameter",
     "-std=c++11",
-    "-fno-rtti",
     "-fno-builtin",
 ]
 
@@ -69,12 +68,14 @@ cc_library_static {
         "external/compiler-rt/include",
     ],
     cflags: asan_rtl_cflags,
+    rtti: false,
     target: {
         android: {
             srcs: ["asan_preinit.cc"],
         },
         host: {
             srcs: asan_rtl_files,
+            cflags: ["-fno-rtti"],
             whole_static_libs: ["libubsan"],
             static_libs: [
                 "libinterception",
@@ -102,6 +103,7 @@ cc_library_host_static {
     cflags: asan_rtl_cflags,
     srcs: asan_rtl_cxx_files,
 
+    rtti: false,
     clang: true,
     compile_multilib: "both",
 
@@ -109,6 +111,9 @@ cc_library_host_static {
         never: true,
     },
     target: {
+        host: {
+            cflags: ["-fno-rtti"],
+        },
         darwin: {
             enabled: false,
         },

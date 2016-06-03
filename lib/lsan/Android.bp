@@ -31,9 +31,14 @@ cc_library_static {
         "-Wno-sign-compare",
         "-Wno-unused-parameter",
         "-std=c++11",
-        "-fno-rtti",
         "-fno-builtin",
     ],
+    rtti: false,
+    target: {
+        host: {
+            cflags: ["-fno-rtti"],
+        },
+    },
     srcs: [
         "lsan_common.cc",
         "lsan_common_linux.cc",
