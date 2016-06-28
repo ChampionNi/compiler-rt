@@ -16,6 +16,24 @@
       "revId": "13407046cefab89d1b35dc63e5dc9dda1456ff29",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3c531ce_6bfa3ac2",
+        "filename": "lib/asan/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2016-06-28T00:47:29Z",
+      "side": 1,
+      "message": "Yes, in that symbols from these libraries are needed for linking when -fsanitize\u003daddress is used.\n\nThe Android.mks used to directly compile (and link with) the sources for these libraries.  I tried the whole_static_lib approach which was enough to build AOSP.  We can go back to the Android.mk approach if we later find it necessary.",
+      "parentUuid": "e3c531ce_6b323ae1",
+      "revId": "13407046cefab89d1b35dc63e5dc9dda1456ff29",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
