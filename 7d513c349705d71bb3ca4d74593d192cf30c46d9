@@ -22,6 +22,30 @@
       "revId": "7d513c349705d71bb3ca4d74593d192cf30c46d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ddc56ece_1f367b41",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-07-07T18:31:12Z",
+      "side": 1,
+      "message": "This is really ugly actually. I realize now that the libcompiler_rt.so that is depended on is still being built for the platform. I am not sure how we build static vs. dynamic libraries in Soong.\n\nEven worse, if I try to start converting the dependencies (external/libunwind*) to using the NDK, I get breakages due to missing symbols for things like \"PRIx64\". I also have the sneaking suspicion that we are losing FORTIFY coverage too, since the _chk versions of functions aren\u0027t available in the older API levels. Suggestions? Is it worthwhile to keep trying to convert these other libs to the NDK? It would seem that the compiler-rt we are shipping on the platform/unbundled is really not acceptable for use at all if we don\u0027t (although in practice there haven\u0027t been any missing symbol issues).",
+      "parentUuid": "ddc56ece_cec27765",
+      "range": {
+        "startLine": 15,
+        "startChar": 32,
+        "endLine": 16,
+        "endChar": 53
+      },
+      "revId": "7d513c349705d71bb3ca4d74593d192cf30c46d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
