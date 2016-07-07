@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ddc56ece_cec27765",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1043845
+      },
+      "writtenOn": "2016-07-07T17:18:50Z",
+      "side": 1,
+      "message": "Then this should probably target 9 rather than 19.",
+      "range": {
+        "startLine": 15,
+        "startChar": 32,
+        "endLine": 16,
+        "endChar": 53
+      },
+      "revId": "7d513c349705d71bb3ca4d74593d192cf30c46d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
