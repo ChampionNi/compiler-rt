@@ -46,6 +46,30 @@
       "revId": "7d513c349705d71bb3ca4d74593d192cf30c46d9",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "daf6544b_f27cce9a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1074628
+      },
+      "writtenOn": "2016-07-08T05:26:01Z",
+      "side": 1,
+      "message": "There were a few bugs with NDK linking in Soong that I\u0027ve fixed. From there, it looks like we just need this change, a sdk_version version of libcompiler_rt, libunwind, libunwindbacktrace, libunwind_llvm, liblzma (and switching to stl: \"none\" on many of them).\n\nThat being said, we do lose some things when switching them to using sdk_version, including sanitize support currently (though some of these libraries turn that off anyway). We could create duplicate modules that switch over to building with the ndk, and just use those for libjniallocations and other ndk users going forward.\n\nSoong ndk link fixes: https://android-review.googlesource.com/246486 https://android-review.googlesource.com/246433 https://android-review.googlesource.com/246542",
+      "parentUuid": "ddc56ece_1f367b41",
+      "range": {
+        "startLine": 15,
+        "startChar": 32,
+        "endLine": 16,
+        "endChar": 53
+      },
+      "revId": "7d513c349705d71bb3ca4d74593d192cf30c46d9",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
