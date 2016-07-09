@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da3e54ec_32479642",
+        "filename": "Android.bp",
+        "patchSetId": 4
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-07-09T03:19:19Z",
+      "side": 1,
+      "message": "This fails for x86_64 otherwise. I am getting really disappointed now. :(",
+      "revId": "a4c7828f2d98120c885ac62d0cea5b2ef08c685f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
