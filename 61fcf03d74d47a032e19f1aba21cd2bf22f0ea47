@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5b3c2fc0_45286ae7",
+        "filename": "lib/ubsan/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2016-08-15T22:23:29Z",
+      "side": 1,
+      "message": "You could probably use \"none\".",
+      "revId": "61fcf03d74d47a032e19f1aba21cd2bf22f0ea47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
