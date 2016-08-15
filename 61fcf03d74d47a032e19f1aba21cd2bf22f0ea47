@@ -16,6 +16,24 @@
       "revId": "61fcf03d74d47a032e19f1aba21cd2bf22f0ea47",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5b3c2fc0_65aece2f",
+        "filename": "lib/ubsan/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1005967
+      },
+      "writtenOn": "2016-08-15T22:28:17Z",
+      "side": 1,
+      "message": "\"none\" does not link libc++abi and I get undefined references to\n__dynamic_cast\ntypeinfo for std::type_info\ntypeinfo for __cxxabiv1::__class_type_info\netc",
+      "parentUuid": "5b3c2fc0_45286ae7",
+      "revId": "61fcf03d74d47a032e19f1aba21cd2bf22f0ea47",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
