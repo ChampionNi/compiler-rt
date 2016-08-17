@@ -1,0 +1,9 @@
+Autosubmit+1: Stephen Hines <srhines@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Verified+1: Stephen Hines <srhines@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Wed, 17 Aug 2016 20:09:16 +0000
+Reviewed-on: https://android-review.googlesource.com/257770
+Project: platform/external/compiler-rt
+Branch: refs/heads/dev
