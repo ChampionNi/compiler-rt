@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9bddc760_9fa1838e",
+        "filename": "lib/asan/scripts/symbolize.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1059554
+      },
+      "writtenOn": "2016-08-17T19:19:50Z",
+      "side": 1,
+      "message": "We should probably use long-format arguments so as not to obscure their meaning (e.g. --wide vs -W, --program-headers vs -l)",
+      "revId": "4a399583fdb64563a4736c19576db17ec687f548",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
