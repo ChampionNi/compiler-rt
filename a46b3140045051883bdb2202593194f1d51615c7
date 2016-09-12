@@ -1,0 +1,9 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Verified+1: Dan Albert <danalbert@google.com>
+Autosubmit+1: Dan Albert <danalbert@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Mon, 12 Sep 2016 21:25:49 +0000
+Reviewed-on: https://android-review.googlesource.com/271253
+Project: platform/external/compiler-rt
+Branch: refs/heads/dev
