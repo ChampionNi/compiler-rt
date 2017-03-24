@@ -25,15 +25,40 @@ tsan_rtl_cppflags = [
     "-fno-builtin",
 ]
 
-cc_library_host_static {
+cc_library_static {
     name: "libtsan",
+    host_supported: true,
 
     include_dirs: ["external/compiler-rt/lib"],
     cppflags: tsan_rtl_cppflags,
     srcs: [
         "rtl/*.cc",
-        "rtl/tsan_rtl_amd64.S",
     ],
+    arch: {
+        x86_64: {
+            srcs: [
+                "rtl/tsan_rtl_amd64.S",
+            ]
+        },
+        arm64: {
+            srcs: [
+                "rtl/tsan_rtl_aarch64.S",
+            ]
+        },
+        mips64: {
+            enabled: false,
+        },
+        x86: {
+            enabled: false,
+        },
+        arm: {
+            enabled: false,
+        },
+        mips: {
+            enabled: false,
+        },
+    },
+
     stl: "none",
     sanitize: {
         never: true,
@@ -51,8 +76,9 @@ cc_library_host_static {
     },
 }
 
-cc_library_host_static {
+cc_library_static {
     name: "libtsan_cxx",
+    host_supported: true,
 
     include_dirs: ["external/compiler-rt/lib"],
     cppflags: tsan_rtl_cppflags,
@@ -63,6 +89,21 @@ cc_library_host_static {
     },
     compile_multilib: "64",
     whole_static_libs: ["libubsan_cxx"],
+
+    arch: {
+        mips64: {
+            enabled: false,
+        },
+        x86: {
+            enabled: false,
+        },
+        arm: {
+            enabled: false,
+        },
+        mips: {
+            enabled: false,
+        },
+    },
     target: {
         darwin: {
             enabled: false,
@@ -70,8 +111,9 @@ cc_library_host_static {
     },
 }
 
-cc_test_host {
+cc_test {
     name: "libtsan_unit_test",
+    host_supported: true,
 
     include_dirs: ["external/compiler-rt/lib"],
     local_include_dirs: ["rtl"],
@@ -108,8 +150,9 @@ cc_test_host {
     },
 }
 
-cc_test_host {
+cc_test {
     name: "libtsan_rtl_test",
+    host_supported: true,
 
     include_dirs: ["external/compiler-rt/lib"],
     local_include_dirs: ["rtl"],
