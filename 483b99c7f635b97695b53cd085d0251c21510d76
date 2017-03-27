@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "60c390fb_8b48768e",
+        "filename": "lib/tsan/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1056364
+      },
+      "writtenOn": "2017-03-27T18:00:52Z",
+      "side": 1,
+      "message": "Can you build it successfully? I built with error missing __pointer_chk_guard, and am not sure how to solve this yet.",
+      "range": {
+        "startLine": 45,
+        "startChar": 16,
+        "endLine": 45,
+        "endChar": 41
+      },
+      "revId": "483b99c7f635b97695b53cd085d0251c21510d76",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
