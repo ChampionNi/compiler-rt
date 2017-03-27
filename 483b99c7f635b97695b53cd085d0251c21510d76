@@ -22,6 +22,30 @@
       "revId": "483b99c7f635b97695b53cd085d0251c21510d76",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4b900cc1_9d429ac0",
+        "filename": "lib/tsan/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2017-03-27T18:06:25Z",
+      "side": 1,
+      "message": "Are you building it in the aosp/master branch by any chance?\n\nRemember this is the aosp/dev branch, which includes r278292 that removes the dependency on pointer_chk_guard.  I don\u0027t think aosp/master includes that revision yet (b/35936936).",
+      "parentUuid": "60c390fb_8b48768e",
+      "range": {
+        "startLine": 45,
+        "startChar": 16,
+        "endLine": 45,
+        "endChar": 41
+      },
+      "revId": "483b99c7f635b97695b53cd085d0251c21510d76",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
