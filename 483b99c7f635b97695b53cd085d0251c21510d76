@@ -94,6 +94,30 @@
       "revId": "483b99c7f635b97695b53cd085d0251c21510d76",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "152ffac6_d760ca13",
+        "filename": "lib/tsan/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2017-03-28T23:28:28Z",
+      "side": 1,
+      "message": "Yabin, we are generating new Clang prebuilts today, so let\u0027s submit this CL.  If you find/fix issues, we can resolve them in the next Clang update.  Having the prebuilt libtsan should probably help your testing as well.",
+      "parentUuid": "fbc16e50_7700c9d3",
+      "range": {
+        "startLine": 45,
+        "startChar": 16,
+        "endLine": 45,
+        "endChar": 41
+      },
+      "revId": "483b99c7f635b97695b53cd085d0251c21510d76",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
     }
   ]
 }
