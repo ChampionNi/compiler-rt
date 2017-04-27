@@ -1,0 +1,9 @@
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Verified+1: Yi Kong <yikong@google.com>
+Submitted-by: Yi Kong <yikong@google.com>
+Submitted-at: Thu, 27 Apr 2017 17:06:12 +0000
+Reviewed-on: https://android-review.googlesource.com/380380
+Project: platform/external/compiler-rt
+Branch: refs/heads/dev
