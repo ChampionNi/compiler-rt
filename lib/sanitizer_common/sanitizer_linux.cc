@@ -228,9 +228,12 @@ static void kernel_stat_to_stat(struct kernel_stat *in, struct stat *out) {
   out->st_size = in->st_size;
   out->st_blksize = in->st_blksize;
   out->st_blocks = in->st_blocks;
-  out->st_atime = in->st_atime_nsec;
-  out->st_mtime = in->st_mtime_nsec;
-  out->st_ctime = in->st_ctime_nsec;
+  out->st_atime = in->_st_atime;
+  out->st_atime_nsec = in->_st_atime_nsec;
+  out->st_mtime = in->_st_mtime;
+  out->st_mtime_nsec = in->_st_mtime_nsec;
+  out->st_ctime = in->_st_ctime;
+  out->st_ctime_nsec = in->_st_ctime_nsec;
   out->st_ino = in->st_ino;
 }
 #endif
