@@ -65,6 +65,10 @@ cc_library_static {
             enabled: true,
         },
     },
+
+    // Hitting https://sourceware.org/bugzilla/show_bug.cgi?id=19976 when
+    // building with LTO. Disabling LTO for now.
+    lto: false,
 }
 
 //=====================================================================
