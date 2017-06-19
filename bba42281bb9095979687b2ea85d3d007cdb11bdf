@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ff6c239_0260d93c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2017-06-19T16:39:51Z",
+      "side": 1,
+      "message": "Should read \u0027x86_64 only\u0027?\n\nI agree with adding these two files for all architectures (even though these get defined only for 64-bit).",
+      "range": {
+        "startLine": 18,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 3
+      },
+      "revId": "bba42281bb9095979687b2ea85d3d007cdb11bdf",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
