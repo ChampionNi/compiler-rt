@@ -211,7 +211,6 @@ static void stat64_to_stat(struct stat64 *in, struct stat *out) {
   out->st_atime = in->st_atime;
   out->st_mtime = in->st_mtime;
   out->st_ctime = in->st_ctime;
-  out->st_ino = in->st_ino;
 }
 #endif
 
@@ -231,7 +230,6 @@ static void kernel_stat_to_stat(struct kernel_stat *in, struct stat *out) {
   out->st_atime = in->st_atime_nsec;
   out->st_mtime = in->st_mtime_nsec;
   out->st_ctime = in->st_ctime_nsec;
-  out->st_ino = in->st_ino;
 }
 #endif
 
