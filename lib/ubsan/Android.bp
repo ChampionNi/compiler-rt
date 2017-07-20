@@ -106,7 +106,7 @@ cc_defaults {
     enabled: false,
 }
 
-cc_library_shared {
+cc_library {
     name: "libclang_rt.ubsan_standalone-arm-android",
     defaults: ["libclang_rt_ubsan_defaults"],
     arch: {
@@ -116,7 +116,7 @@ cc_library_shared {
     },
 }
 
-cc_library_shared {
+cc_library {
     name: "libclang_rt.ubsan_standalone-aarch64-android",
     defaults: ["libclang_rt_ubsan_defaults"],
     arch: {
@@ -126,7 +126,7 @@ cc_library_shared {
     },
 }
 
-cc_library_shared {
+cc_library {
     name: "libclang_rt.ubsan_standalone-i686-android",
     defaults: ["libclang_rt_ubsan_defaults"],
     arch: {
@@ -136,7 +136,7 @@ cc_library_shared {
     },
 }
 
-cc_library_shared {
+cc_library {
     name: "libclang_rt.ubsan_standalone-x86_64-android",
     defaults: ["libclang_rt_ubsan_defaults"],
     arch: {
@@ -146,7 +146,7 @@ cc_library_shared {
     },
 }
 
-cc_library_shared {
+cc_library {
     name: "libclang_rt.ubsan_standalone-mips-android",
     defaults: ["libclang_rt_ubsan_defaults"],
     arch: {
@@ -156,7 +156,7 @@ cc_library_shared {
     },
 }
 
-cc_library_shared {
+cc_library {
     name: "libclang_rt.ubsan_standalone-mips64-android",
     defaults: ["libclang_rt_ubsan_defaults"],
     arch: {
@@ -184,6 +184,26 @@ cc_library_host_static {
     target: {
         darwin: {
             enabled: false,
+        },
+    },
+    arch: {
+        arm: {
+            required: ["libclang_rt.ubsan_standalone-arm-android"],
+        },
+        arm64: {
+            required: ["libclang_rt.ubsan_standalone-aarch64-android"],
+        },
+        x86: {
+            required: ["libclang_rt.ubsan_standalone-i686-android"],
+        },
+        x86_64: {
+            required: ["libclang_rt.ubsan_standalone-x86_64-android"],
+        },
+        mips: {
+            required: ["libclang_rt.ubsan_standalone-mips-android"],
+        },
+        mips64: {
+            required: ["libclang_rt.ubsan_standalone-mips64-android"],
         },
     },
 }
