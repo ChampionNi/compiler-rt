@@ -354,7 +354,7 @@ cc_library {
         },
     },
 
-    sdk_version: "21",
+    sdk_version: "14",
     target: {
         not_windows: {
             host_ldlibs: [
