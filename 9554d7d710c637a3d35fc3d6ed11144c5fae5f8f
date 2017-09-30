@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06fd5daf_04f4877d",
+        "filename": "lib/tsan/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2017-09-30T00:29:37Z",
+      "side": 1,
+      "message": "This is pretty interesting. Was this because of the .S files?",
+      "revId": "9554d7d710c637a3d35fc3d6ed11144c5fae5f8f",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": false
+    }
+  ]
+}
