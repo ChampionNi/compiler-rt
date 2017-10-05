@@ -1,0 +1,7 @@
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Verified+1: Stephen Hines <srhines@google.com>
+Submitted-by: Stephen Hines <srhines@google.com>
+Submitted-at: Thu, 05 Oct 2017 19:34:40 +0000
+Reviewed-on: https://android-review.googlesource.com/502469
+Project: platform/external/compiler-rt
+Branch: refs/heads/dev
