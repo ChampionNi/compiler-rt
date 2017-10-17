@@ -1,0 +1,10 @@
+Verified+1: Jae Shin <jaeshin@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+2: Miao Wang <miaowang@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Code-Review+2: Andrew Hsieh <andrewhsieh@google.com>
+Submitted-by: Jae Shin <jaeshin@google.com>
+Submitted-at: Tue, 17 Oct 2017 01:11:18 +0000
+Reviewed-on: https://android-review.googlesource.com/512001
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
