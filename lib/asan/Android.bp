@@ -234,7 +234,6 @@ cc_library_static {
     host_supported: true,
     defaults: ["asan_arch_defaults"],
 
-    tags: ["tests"],
     include_dirs: [
         "external/compiler-rt/include",
         "external/compiler-rt/lib",
@@ -270,7 +269,6 @@ cc_test {
     host_supported: true,
     defaults: ["asan_arch_defaults"],
 
-    tags: ["tests"],
     include_dirs: [
         "external/compiler-rt/lib",
         "external/compiler-rt/lib/asan/tests",
