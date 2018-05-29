@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "567a5a91_6bda78b0",
+        "filename": "lib/asan/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2018-05-29T18:18:30Z",
+      "side": 1,
+      "message": "This is a no-op since libclang_rt_defaults is not used anywhere.  (All uses are commented out).  Let\u0027s just delete these: https://android-review.googlesource.com/#/c/platform/external/compiler-rt/+/695462",
+      "revId": "f20e11f6d60d60005f5b2caa6d40aa59c672bd08",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
