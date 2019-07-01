@@ -1,0 +1,7 @@
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Code-Review+2: Stephen Hines <srhines@google.com>
+Submitted-by: Dimitry Ivanov <dimitry@google.com>
+Submitted-at: Mon, 01 Jul 2019 18:41:55 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/compiler-rt/+/1009068
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
