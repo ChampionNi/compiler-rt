@@ -447,5 +447,3 @@ cc_defaults {
         },
     },
 }
-
-subdirs=["lib/*"]
