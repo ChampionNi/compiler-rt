@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a86b49bd_cd62dd69",
+        "filename": "Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 421,
+      "author": {
+        "id": 1058860
+      },
+      "writtenOn": "2019-07-22T23:12:41Z",
+      "side": 0,
+      "message": "We can delete this as well.  I can submit a follow up if you don\u0027t want this to go through TH again.",
+      "revId": "c3c4d5dcbe329224ae09d0765f185a239a4d73da",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
