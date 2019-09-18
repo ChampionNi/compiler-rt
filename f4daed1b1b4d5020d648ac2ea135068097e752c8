@@ -1,0 +1,8 @@
+Code-Review+2: Evgenii Stepanov <eugenis@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-by: Xuan Xing <xuanxing@google.com>
+Submitted-at: Wed, 18 Sep 2019 17:56:10 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/compiler-rt/+/1123541
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
