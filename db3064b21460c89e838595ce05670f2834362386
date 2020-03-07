@@ -1,0 +1,10 @@
+Code-Review+2: Yi Kong <yikong@google.com>
+Code-Review+2: Pirama Arumuga Nainar <pirama@google.com>
+Presubmit-Verified+1: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <android-build-prod-ayeaye@system.gserviceaccount.com>
+Autosubmit+1: Elliott Hughes <enh@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Sat, 07 Mar 2020 20:30:49 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/compiler-rt/+/1252931
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
