@@ -365,31 +365,6 @@ cc_library {
         android: {
             shared_libs: ["liblog"],
         },
-        android_arm: {
-            static_libs: ["libunwind_llvm"],
-            ldflags: ["-Wl,--exclude-libs,libunwind_llvm.a"],
-        },
-        android_arm64: {
-            static_libs: ["libunwindbacktrace", "libunwind_static"],
-            ldflags: ["-Wl,--exclude-libs,libunwindbacktrace.a:libunwind.a"],
-        },
-        android_x86: {
-            static_libs: ["libunwindbacktrace", "libunwind_static"],
-            ldflags: ["-Wl,--exclude-libs,libunwindbacktrace.a:libunwind.a"],
-        },
-        android_x86_64: {
-            srcs: ["lib/builtins/ppc/floatditf.c"],
-            static_libs: ["libunwindbacktrace", "libunwind_static"],
-            ldflags: ["-Wl,--exclude-libs,libunwindbacktrace.a:libunwind.a"],
-        },
-        linux_glibc: {
-            static_libs: ["libunwindbacktrace", "libunwind_static"],
-        },
-        windows: {
-            enabled: true,
-            // Only build enable_execute_stack.c on non-Windows hosts.
-            exclude_srcs: ["lib/builtins/enable_execute_stack.c"],
-        },
     },
 
     asflags: ["-integrated-as"],
