@@ -1,0 +1,9 @@
+Presubmit-Verified+2: Treehugger Robot <treehugger-gerrit@google.com>
+Lint+1: Lint 🤖 <ayeaye-gerrit@google.com>
+Code-Review+2: Ryan Prichard <rprichard@google.com>
+Autosubmit+1: Stephen Hines <srhines@google.com>
+Submitted-by: Treehugger Robot <treehugger-gerrit@google.com>
+Submitted-at: Fri, 15 Jan 2021 18:29:08 +0000
+Reviewed-on: https://android-review.googlesource.com/c/platform/external/compiler-rt/+/1551194
+Project: platform/external/compiler-rt
+Branch: refs/heads/master
