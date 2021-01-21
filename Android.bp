@@ -19,6 +19,17 @@
 // Static Library: libcompiler_rt-extras
 //=====================================================================
 
+package {
+    default_applicable_licenses: ["external_compiler-rt_license"],
+}
+
+license {
+    name: "external_compiler-rt_license",
+    visibility: [":__subpackages__"],
+    license_kinds: ["SPDX-license-identifier-BSD","SPDX-license-identifier-MIT","SPDX-license-identifier-NCSA","legacy_unencumbered"],
+    license_text: ["NOTICE"],
+}
+
 cc_library_static {
     name: "libcompiler_rt-extras",
     host_supported: true,
