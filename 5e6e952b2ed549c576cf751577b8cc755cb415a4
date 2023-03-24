@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1f68543_2bff6a34",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-03-24T21:17:31Z",
+      "side": 1,
+      "message": "We still need to chat about why the CFI config file lives in a RenderScript project, but perhaps there\u0027s no better place for it.",
+      "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    }
+  ]
+}
