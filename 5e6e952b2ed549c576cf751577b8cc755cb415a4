@@ -63,6 +63,30 @@
       },
       "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c3333d9_4348d013",
+        "filename": "lib/cfi/LICENSE",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1010056
+      },
+      "writtenOn": "2023-03-28T19:23:12Z",
+      "side": 1,
+      "message": "It looks like this came from jvm.h, which isn\u0027t really relevant here either. Does this directory need a different LICENSE file than what is at the top-level?",
+      "parentUuid": "99defec5_3170bb1f",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 64
+      },
+      "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
