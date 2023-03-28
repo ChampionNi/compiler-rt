@@ -39,6 +39,30 @@
       },
       "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99defec5_3170bb1f",
+        "filename": "lib/cfi/LICENSE",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-03-28T19:06:02Z",
+      "side": 1,
+      "message": "I just copied another LICENSE file and changed the Copyright date at the top to 2023. I can remove it if you like in a separate CL (this one is already merged), but please confirm exactly which text you want me to remove before I do so.",
+      "parentUuid": "bd657d83_7e373ad7",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 64
+      },
+      "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
