@@ -183,6 +183,30 @@
       },
       "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d905cc49_55f7b5c8",
+        "filename": "lib/cfi/LICENSE",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-28T20:25:44Z",
+      "side": 1,
+      "message": "yes, unless you have reason to believe there\u0027s actually GPL code here, this file should be deleted.\n\n(looking at https://android-review.git.corp.google.com/c/platform/external/compiler-rt/+/2503136?checksPatchset\u003d1\u0026tab\u003dchecks -- which i assume is what you saw -- yeah, that\u0027s a false-positive because the [google3] tool can\u0027t cope with the traditional Android NOTICE file, which is present and appears to be correct.)",
+      "parentUuid": "85f0fcea_03cfc27f",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 64
+      },
+      "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
