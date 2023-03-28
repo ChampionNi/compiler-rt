@@ -159,6 +159,30 @@
       },
       "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "85f0fcea_03cfc27f",
+        "filename": "lib/cfi/LICENSE",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-03-28T20:17:05Z",
+      "side": 1,
+      "message": "Oh, I only added it because there was a lint failure that said it wanted one. Would you like me to remove the LICENSE file altogether?",
+      "parentUuid": "62472324_511af718",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 64
+      },
+      "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
