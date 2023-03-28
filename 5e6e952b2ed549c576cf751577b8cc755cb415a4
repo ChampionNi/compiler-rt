@@ -87,6 +87,30 @@
       },
       "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e2cd9c01_6060d7d0",
+        "filename": "lib/cfi/LICENSE",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1076723
+      },
+      "writtenOn": "2023-03-28T19:29:32Z",
+      "side": 1,
+      "message": "What do you mean by top level, exactly? I don\u0027t see a LICENSE file at the root of the tree.",
+      "parentUuid": "8c3333d9_4348d013",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 64
+      },
+      "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
