@@ -231,6 +231,30 @@
       },
       "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b93feece_2f311612",
+        "filename": "lib/cfi/LICENSE",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-28T20:34:11Z",
+      "side": 1,
+      "message": "thanks! feel free to reach out any time the machines seem to be asking you to do something questionable.\n\n(but for the specific case of licensing, even when the bot is _right_, there\u0027s often a benefit to ignoring it, because an expert [bbadour] will be along later with the correct change for you to rubber-stamp, courtesy of monitoring done by his far better script. no, i don\u0027t know why we can\u0027t just cut out the less-helpful middleman there...)",
+      "parentUuid": "1e74abfe_3d434b5e",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 64
+      },
+      "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
