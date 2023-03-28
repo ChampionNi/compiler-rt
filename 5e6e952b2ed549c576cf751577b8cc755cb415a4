@@ -16,6 +16,29 @@
       "message": "We still need to chat about why the CFI config file lives in a RenderScript project, but perhaps there\u0027s no better place for it.",
       "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd657d83_7e373ad7",
+        "filename": "lib/cfi/LICENSE",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2023-03-28T18:57:59Z",
+      "side": 1,
+      "message": "where did this come from?",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 64
+      },
+      "revId": "5e6e952b2ed549c576cf751577b8cc755cb415a4",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889"
     }
   ],
   "submitRequirementResults": [
