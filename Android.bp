@@ -110,11 +110,7 @@ cc_library {
     name: "libcompiler_rt",
     vendor_available: true,
     product_available: true,
-    vndk: {
-        enabled: true,
-        support_system_process: true,
-        private: true,
-    },
+    double_loadable: true,
     host_supported: true,
     native_bridge_supported: true,
     // The following list contains platform-independent functionalities.
